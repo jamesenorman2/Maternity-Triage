@@ -480,6 +480,15 @@ textarea.text-input {
   font-size: 0.9rem;
 }
 
+.ios-install-steps {
+  margin: 0 0 16px;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.5;
+}
+
 /* Emergencies drawer */
 .emergencies-header {
   display: flex;

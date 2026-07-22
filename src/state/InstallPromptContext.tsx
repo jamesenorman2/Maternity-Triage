@@ -12,6 +12,7 @@ interface BeforeInstallPromptEvent extends Event {
 interface InstallPromptContextValue {
   canInstall: boolean;
   isInstalled: boolean;
+  isIos: boolean;
   promptInstall: () => Promise<void>;
 }
 
@@ -24,9 +25,21 @@ function isStandalone() {
   );
 }
 
+// iOS Safari (and any browser on iOS, since they all use WebKit) never fires
+// beforeinstallprompt — there is no programmatic install trigger on iOS at
+// all. "Add to Home Screen" only exists as a manual step in the Share sheet,
+// so this is the only way to offer install guidance on those devices.
+function detectIos() {
+  const ua = window.navigator.userAgent;
+  const isIphoneOrIpad = /iPad|iPhone|iPod/.test(ua);
+  const isIpadOs13Plus = ua.includes("Macintosh") && navigator.maxTouchPoints > 1;
+  return isIphoneOrIpad || isIpadOs13Plus;
+}
+
 export function InstallPromptProvider({ children }: { children: ReactNode }) {
   const [deferredEvent, setDeferredEvent] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstalled, setIsInstalled] = useState(isStandalone);
+  const [isIos] = useState(detectIos);
 
   useEffect(() => {
     const onBeforeInstallPrompt = (e: Event) => {
@@ -55,7 +68,7 @@ export function InstallPromptProvider({ children }: { children: ReactNode }) {
 
   return (
     <InstallPromptContext.Provider
-      value={{ canInstall: deferredEvent !== null && !isInstalled, isInstalled, promptInstall }}
+      value={{ canInstall: deferredEvent !== null && !isInstalled, isInstalled, isIos, promptInstall }}
     >
       {children}
     </InstallPromptContext.Provider>

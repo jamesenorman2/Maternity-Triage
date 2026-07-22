@@ -2,18 +2,21 @@
   "id": "abdo",
   "title": "Abdominal pain in pregnancy",
   "section": "antenatal",
-  "summary": "Any abdominal, side, or pelvic pain in pregnancy — includes ruling out ectopic, appendicitis, abruption, UTI, and labour before reassuring round ligament pain.",
+  "summary": "Any abdominal, side, or pelvic pain in pregnancy — includes ruling out ectopic, ovarian cyst accident, appendicitis, abruption, UTI, and labour before reassuring round ligament pain, pelvic girdle pain, or constipation.",
   "keywords": [
     "left sided pain", "right sided pain", "left side pain", "right side pain", "side pain", "one sided pain",
     "stomach pain", "tummy pain", "belly pain", "abdo pain", "cramping", "cramps", "sharp pain", "stitch",
     "round ligament", "appendicitis", "appendix", "RIF pain", "LIF pain", "right iliac fossa", "groin pain",
-    "pelvic pain", "period pain", "tightenings", "Braxton Hicks", "kidney pain", "loin pain", "UTI", "water infection"
+    "pelvic pain", "period pain", "tightenings", "Braxton Hicks", "kidney pain", "loin pain", "UTI", "water infection",
+    "ovarian cyst", "cyst torsion", "twisted cyst", "ovary pain", "adnexal pain",
+    "SPD", "pelvic girdle pain", "PGP", "symphysis pubis", "pubic pain", "hip pain", "pubic bone pain",
+    "constipation", "trapped wind", "bloating", "can't poo", "straining"
   ],
   "lastReviewed": "2026-07-22",
   "openingFields": [
     { "id": "gestation", "label": "Gestation (weeks+days)", "kind": "gestation" },
     { "id": "parity", "label": "Gravida / Parity", "kind": "parity" },
-    { "id": "riskFactors", "label": "Known risk factors (e.g. previous ectopic, IVF/assisted conception, PID, coil in situ, fibroids)", "kind": "riskFactors" }
+    { "id": "riskFactors", "label": "Known risk factors (e.g. previous ectopic, IVF/assisted conception, PID, coil in situ, fibroids, known ovarian cyst)", "kind": "riskFactors" }
   ],
   "startNode": "abdo-01",
   "nodes": {
@@ -78,7 +81,7 @@
       "redFlag": true,
       "answers": [
         { "label": "Yes — one-sided or shoulder-tip pain", "next": "abdo-outcome-red-ectopic" },
-        { "label": "No", "next": "abdo-early-02" }
+        { "label": "No", "next": "abdo-early-01b" }
       ],
       "citation": {
         "guideline": "NG126",
@@ -86,6 +89,17 @@
         "checked": "2026-07-22",
         "verify": true
       }
+    },
+    "abdo-early-01b": {
+      "type": "question",
+      "id": "abdo-early-01b",
+      "text": "Was the pain sudden in onset and severe, especially on one side, possibly with nausea or vomiting — particularly if there's a known ovarian cyst, fibroid, or she's had fertility treatment?",
+      "phoneText": "Ask: did the pain come on suddenly and badly, mostly on one side? Is she feeling or being sick with it? Does she know of an ovarian cyst?",
+      "redFlag": true,
+      "answers": [
+        { "label": "Yes", "next": "abdo-outcome-orange-ovariancyst" },
+        { "label": "No", "next": "abdo-early-02" }
+      ]
     },
     "abdo-early-02": {
       "type": "question",
@@ -105,6 +119,15 @@
       "redFlag": true,
       "answers": [
         { "label": "Yes", "next": "abdo-outcome-orange-uti" },
+        { "label": "No", "next": "abdo-early-03b" }
+      ]
+    },
+    "abdo-early-03b": {
+      "type": "question",
+      "id": "abdo-early-03b",
+      "text": "Does this sound like constipation — bloating, straining, infrequent or hard stools, with nothing else concerning?",
+      "answers": [
+        { "label": "Yes — sounds like constipation", "next": "abdo-outcome-green-constipation" },
         { "label": "No", "next": "abdo-early-04" }
       ]
     },
@@ -124,7 +147,7 @@
       "phoneText": "Ask: do the pains come and go like tightenings, and are they getting more regular or closer together?",
       "answers": [
         { "label": "Yes — possible labour", "next": "abdo-later-labour-gestation" },
-        { "label": "No", "next": "abdo-later-02" }
+        { "label": "No", "next": "abdo-later-01b" }
       ]
     },
     "abdo-later-labour-gestation": {
@@ -142,6 +165,17 @@
         "checked": "2026-07-22",
         "verify": true
       }
+    },
+    "abdo-later-01b": {
+      "type": "question",
+      "id": "abdo-later-01b",
+      "text": "Was the pain sudden in onset and severe, especially on one side, possibly with nausea or vomiting — particularly if there's a known ovarian cyst, fibroid, or she's had fertility treatment?",
+      "phoneText": "Ask: did the pain come on suddenly and badly, mostly on one side? Is she feeling or being sick with it? Does she know of an ovarian cyst?",
+      "redFlag": true,
+      "answers": [
+        { "label": "Yes", "next": "abdo-outcome-orange-ovariancyst" },
+        { "label": "No", "next": "abdo-later-02" }
+      ]
     },
     "abdo-later-02": {
       "type": "question",
@@ -176,12 +210,31 @@
       "redFlag": true,
       "answers": [
         { "label": "Yes", "next": "abdo-outcome-orange-uti" },
+        { "label": "No", "next": "abdo-later-04b" }
+      ]
+    },
+    "abdo-later-04b": {
+      "type": "question",
+      "id": "abdo-later-04b",
+      "text": "Is the pain over the pubic bone, groin, hips, or lower back — worse walking, climbing stairs, standing on one leg, or turning over in bed, sometimes with clicking or grinding (typical of pelvic girdle pain / SPD)?",
+      "phoneText": "Ask: is it pain at the front over the pubic bone, or across the hips/lower back, that's worse walking, on stairs, or turning over in bed?",
+      "answers": [
+        { "label": "Yes — sounds like pelvic girdle pain / SPD", "next": "abdo-outcome-green-spd" },
         { "label": "No", "next": "abdo-later-05" }
       ]
     },
     "abdo-later-05": {
       "type": "question",
       "id": "abdo-later-05",
+      "text": "Does this sound like constipation — bloating, straining, infrequent or hard stools, with nothing else concerning?",
+      "answers": [
+        { "label": "Yes — sounds like constipation", "next": "abdo-outcome-green-constipation" },
+        { "label": "No", "next": "abdo-later-06" }
+      ]
+    },
+    "abdo-later-06": {
+      "type": "question",
+      "id": "abdo-later-06",
       "text": "Is the pain mild, sharp or aching, worse on standing, moving, or coughing, low in the tummy or groin, with nothing else concerning (typical of round ligament/stretching pain)?",
       "answers": [
         { "label": "Yes — sounds like simple/round ligament pain", "next": "abdo-outcome-green-roundligament" },
@@ -325,6 +378,38 @@
           "guideline": "NG126",
           "section": "Ectopic pregnancy and miscarriage — presenting symptoms and emergency referral",
           "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    },
+    "abdo-outcome-orange-ovariancyst": {
+      "type": "outcome",
+      "id": "abdo-outcome-orange-ovariancyst",
+      "category": "ORANGE",
+      "title": "Possible ovarian cyst accident (torsion or rupture) — cannot be excluded by phone",
+      "target": "Seen within 15 minutes (face-to-face) / same-day emergency assessment (phone)",
+      "actions": [
+        "Arrange same-day joint obstetric and gynaecology assessment — ovarian torsion is time-critical for ovary-conserving surgery, so a low threshold for review is appropriate.",
+        "Pelvic/transvaginal ultrasound with Doppler flow assessment where available, to look for an adnexal mass and assess ovarian blood flow.",
+        "If signs of shock develop at any point (suggesting rupture with bleeding), escalate immediately as a maternal emergency — see the Abdominal pain with signs of shock outcome and Maternal collapse drill.",
+        "Ovarian cysts are more common in the first trimester (e.g. corpus luteal cysts) and with assisted conception, but torsion can occur at any gestation."
+      ],
+      "phoneScript": "Tell her this needs checking today by the maternity and gynaecology teams — please come in now. Call 999 instead if the pain becomes severe or she feels faint or very unwell.",
+      "safetyNetting": [
+        "Come in immediately, any time, if pain worsens, she feels faint or dizzy, or she feels very unwell."
+      ],
+      "documentationPrompts": [
+        "Onset and character of pain.",
+        "Known cyst/fibroid or fertility treatment history.",
+        "Ultrasound findings.",
+        "Gynaecology review arranged — yes/time."
+      ],
+      "citations": [
+        {
+          "guideline": "Clinical practice (gynaecology)",
+          "section": "Ovarian torsion/cyst accident in pregnancy — not covered by a dedicated NICE or RCOG guideline",
+          "checked": "2026-07-22",
+          "nonNice": true,
           "verify": true
         }
       ]
@@ -477,6 +562,73 @@
         }
       ]
     },
+    "abdo-outcome-green-spd": {
+      "type": "outcome",
+      "id": "abdo-outcome-green-spd",
+      "category": "GREEN",
+      "title": "Likely pregnancy-related pelvic girdle pain (symphysis pubis dysfunction)",
+      "target": "Non-urgent — advice, physiotherapy referral, and safety-netting",
+      "actions": [
+        "Reassure that pain over the pubic bone, groin, hips, or lower back, worse with walking, stairs, standing on one leg, or turning over in bed, is common in pregnancy and is usually mechanical (pelvic girdle pain / SPD) rather than a sign of a problem with the baby.",
+        "Refer to obstetric/pelvic health physiotherapy for assessment, exercises, and pelvic support belt advice — VERIFY the local referral route and waiting time.",
+        "Practical advice: keep knees together when getting in/out of a car or turning in bed, avoid activities that provoke pain (wide-leg movements, standing on one leg to dress), take stairs one at a time.",
+        "This is general reassurance, not a formal diagnosis — she should still be seen if the pain changes character or anything below develops."
+      ],
+      "phoneScript": "Explain this sounds like common pregnancy-related pelvic joint pain, not a sign of a problem with the baby, and that a referral to the physiotherapy team can help with exercises and support. She should contact us again straight away — any time — if the pain becomes severe or one-sided, she notices bleeding, a temperature, feels generally unwell, or is still worried.",
+      "safetyNetting": [
+        "Contact the unit again immediately if the pain becomes severe, constant, or one-sided, bleeding starts, fever develops, or she feels generally unwell.",
+        "Come back at any time, however many times, if still worried — this reassurance does not replace being seen if things change."
+      ],
+      "documentationPrompts": [
+        "Pain characteristics and what was excluded.",
+        "Physiotherapy referral made — yes/date.",
+        "Advice given and safety-netting discussed."
+      ],
+      "citations": [
+        {
+          "guideline": "Clinical practice (pelvic health physiotherapy guidance)",
+          "section": "Pregnancy-related pelvic girdle pain / symphysis pubis dysfunction — general reassurance and physiotherapy referral advice; not a dedicated NICE guideline topic",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        },
+        {
+          "guideline": "NG201",
+          "section": "Antenatal care — advice on common pregnancy symptoms including pelvic/back pain",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    },
+    "abdo-outcome-green-constipation": {
+      "type": "outcome",
+      "id": "abdo-outcome-green-constipation",
+      "category": "GREEN",
+      "title": "Likely constipation",
+      "target": "Non-urgent — advice with safety-netting",
+      "actions": [
+        "Reassure that constipation is common in pregnancy (related to hormonal effects on the bowel and, later, pressure from the growing uterus) and is not usually a sign of a problem.",
+        "Advise increasing fluid and fibre intake and gentle activity; signpost to local/BNF guidance if a laxative is being considered rather than giving medication advice directly.",
+        "This is general reassurance, not a formal diagnosis — she should still be seen if the pain changes character or anything below develops."
+      ],
+      "phoneScript": "Explain this sounds like constipation, which is very common in pregnancy and usually settles with more fluids, fibre, and gentle movement. She should contact us again straight away — any time — if the pain becomes severe or constant, she notices bleeding, a temperature, feels generally unwell, or is still worried.",
+      "safetyNetting": [
+        "Contact the unit again immediately if pain becomes severe or constant, bleeding starts, fever develops, or she feels generally unwell.",
+        "Come back at any time, however many times, if still worried, or if symptoms don't improve with simple measures."
+      ],
+      "documentationPrompts": [
+        "Bowel habit and pain characteristics.",
+        "Advice given and safety-netting discussed."
+      ],
+      "citations": [
+        {
+          "guideline": "NG201",
+          "section": "Antenatal care — dietary and lifestyle advice for common pregnancy symptoms including constipation",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    },
     "abdo-outcome-green-roundligament": {
       "type": "outcome",
       "id": "abdo-outcome-green-roundligament",
@@ -545,7 +697,7 @@
       "actions": [
         "Red-flag causes screened and not currently present, but the cause is not clearly benign — arrange face-to-face assessment.",
         "Abdominal examination, fetal assessment (CTG if appropriate for gestation), urinalysis, BP check.",
-        "Reconsider abruption, labour, appendicitis, UTI, and pre-eclampsia if the picture changes."
+        "Reconsider abruption, labour, appendicitis, UTI, ovarian cyst accident, and pre-eclampsia if the picture changes."
       ],
       "phoneScript": "Tell her this still needs checking today even though nothing sounds like an emergency right now — please come in so we can examine her and check the baby.",
       "safetyNetting": [

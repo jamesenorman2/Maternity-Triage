@@ -12,6 +12,12 @@ export function IntendedUseStatement() {
         Local trust guidelines always take precedence over the content in this app. Nothing typed into this app is
         saved, sent anywhere, or recorded — closing or resetting a triage discards it completely.
       </p>
+      <p className="intended-use-sub">
+        <strong>Installing to your home screen:</strong> on Android/Chrome/Edge, tap <strong>📲 Install app</strong>{" "}
+        in the toolbar. On iPhone/iPad, open this page in Safari, tap the Share icon, then{" "}
+        <strong>Add to Home Screen</strong> — Apple only allows this manual route, there's no one-tap install button
+        on iOS.
+      </p>
     </>
   );
 }
