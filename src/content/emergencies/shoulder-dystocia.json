@@ -1,0 +1,48 @@
+{
+  "id": "em-shoulder-dystocia",
+  "title": "Shoulder dystocia",
+  "section": "emergency",
+  "summary": "Failure of the shoulders to deliver spontaneously after the head, requiring additional obstetric manoeuvres.",
+  "lastReviewed": "2026-07-22",
+  "openingFields": [],
+  "startNode": "sd-outcome",
+  "nodes": {
+    "sd-outcome": {
+      "type": "outcome",
+      "id": "sd-outcome",
+      "category": "RED",
+      "title": "Shoulder dystocia — emergency drill (HELPERR)",
+      "target": "Immediate — call for help now",
+      "actions": [
+        "Call for help immediately — senior midwife, obstetrician, neonatal team; note the time.",
+        "H — Call for Help, note the time.",
+        "E — Evaluate for Episiotomy (to allow room for manoeuvres, not to relieve bony obstruction itself).",
+        "L — Legs: McRoberts manoeuvre (hyperflex maternal hips onto abdomen).",
+        "P — suprapubic Pressure applied by an assistant.",
+        "E — Enter manoeuvres: internal rotational manoeuvres (e.g. Rubin II / Wood's screw).",
+        "R — Remove the posterior arm.",
+        "R — Roll the woman onto all fours (if not already attempted) and repeat manoeuvres.",
+        "Avoid fundal pressure and excessive traction throughout — associated with increased injury.",
+        "Note the time of head delivery and time of body delivery, and which manoeuvres were used, for the record and neonatal handover."
+      ],
+      "phoneScript": "",
+      "safetyNetting": [],
+      "documentationPrompts": [
+        "Time of head delivery and time of body delivery (head-to-body interval).",
+        "Manoeuvres used, in order, and by whom.",
+        "Staff present.",
+        "Neonatal condition at birth and any signs of injury (e.g. brachial plexus, fracture).",
+        "Maternal injury assessment (perineal/anal sphincter, PPH risk)."
+      ],
+      "citations": [
+        {
+          "guideline": "RCOG",
+          "section": "GTG 42 — Shoulder Dystocia, HELPERR mnemonic",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        }
+      ]
+    }
+  }
+}

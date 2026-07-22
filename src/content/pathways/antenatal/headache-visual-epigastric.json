@@ -1,0 +1,256 @@
+{
+  "id": "pe",
+  "title": "Headache, visual disturbance or epigastric pain (pre-eclampsia screen)",
+  "section": "antenatal",
+  "summary": "Headache, visual symptoms, epigastric/RUQ pain, or a raised blood pressure reading — screening for pre-eclampsia.",
+  "lastReviewed": "2026-07-22",
+  "openingFields": [
+    { "id": "gestation", "label": "Gestation (weeks+days)", "kind": "gestation" },
+    { "id": "parity", "label": "Gravida / Parity", "kind": "parity" },
+    { "id": "riskFactors", "label": "Known risk factors (e.g. chronic hypertension, previous pre-eclampsia, multiple pregnancy)", "kind": "riskFactors" }
+  ],
+  "startNode": "pe-01",
+  "nodes": {
+    "pe-01": {
+      "type": "question",
+      "id": "pe-01",
+      "text": "What is her most recent blood pressure reading?",
+      "phoneText": "Ask if she has a home BP monitor and what the last reading was, if any.",
+      "redFlag": true,
+      "answers": [
+        { "label": "160/110 mmHg or higher", "next": "pe-outcome-red-severehtn" },
+        { "label": "140/90 to 159/109 mmHg", "next": "pe-02a" },
+        { "label": "Below 140/90 mmHg, or not yet known", "next": "pe-02b" }
+      ],
+      "citation": {
+        "guideline": "NG133",
+        "section": "Hypertension in pregnancy — severe hypertension threshold (BP ≥160/110 mmHg = admit)",
+        "checked": "2026-07-22"
+      }
+    },
+    "pe-02a": {
+      "type": "question",
+      "id": "pe-02a",
+      "text": "Does she have any of these symptoms right now: visual disturbance (flashing lights, blurring, or loss of vision), a severe headache not relieved by usual analgesia, epigastric or right-upper-quadrant pain, or persistent vomiting with headache?",
+      "phoneText": "Ask specifically about each: flashing lights or blurred vision, a bad headache that won't go with paracetamol, pain under the ribs on the right, or being sick along with the headache.",
+      "redFlag": true,
+      "answers": [
+        { "label": "Yes — one or more present", "next": "pe-outcome-red-severefeatures" },
+        { "label": "No", "next": "pe-outcome-orange-raisedbp" }
+      ],
+      "citation": {
+        "guideline": "NG133",
+        "section": "Hypertension in pregnancy — features of severe pre-eclampsia warranting admission",
+        "checked": "2026-07-22",
+        "verify": true
+      }
+    },
+    "pe-02b": {
+      "type": "question",
+      "id": "pe-02b",
+      "text": "Does she have any of these symptoms right now: visual disturbance (flashing lights, blurring, or loss of vision), a severe headache not relieved by usual analgesia, epigastric or right-upper-quadrant pain, or persistent vomiting with headache?",
+      "phoneText": "Ask specifically about each: flashing lights or blurred vision, a bad headache that won't go with paracetamol, pain under the ribs on the right, or being sick along with the headache.",
+      "redFlag": true,
+      "answers": [
+        { "label": "Yes — one or more present", "next": "pe-outcome-orange-symptomsnormalbp" },
+        { "label": "No", "next": "pe-03" }
+      ],
+      "citation": {
+        "guideline": "NG133",
+        "section": "Hypertension in pregnancy — symptoms of pre-eclampsia to screen for at every contact",
+        "checked": "2026-07-22",
+        "verify": true
+      }
+    },
+    "pe-03": {
+      "type": "question",
+      "id": "pe-03",
+      "text": "Are there any risk factors for pre-eclampsia — first pregnancy, previous pre-eclampsia, chronic hypertension, pre-existing diabetes, multiple pregnancy, BMI over 35, maternal age 40 or over, or family history?",
+      "answers": [
+        { "label": "Yes — one or more risk factors", "next": "pe-outcome-yellow-riskfactors" },
+        { "label": "No known risk factors", "next": "pe-outcome-green" }
+      ],
+      "citation": {
+        "guideline": "NG133",
+        "section": "Hypertension in pregnancy — risk factors for pre-eclampsia",
+        "checked": "2026-07-22",
+        "verify": true
+      }
+    },
+    "pe-outcome-red-severehtn": {
+      "type": "outcome",
+      "id": "pe-outcome-red-severehtn",
+      "category": "RED",
+      "title": "Severe hypertension (BP ≥160/110 mmHg)",
+      "target": "Immediate — same-day emergency admission",
+      "actions": [
+        "Arrange immediate transfer for admission — severe hypertension in pregnancy requires urgent assessment and treatment regardless of symptoms.",
+        "Repeat BP measurement to confirm; do not delay referral awaiting repeat if clearly severe.",
+        "Full pre-eclampsia bloods (FBC, U&E, LFTs), urine protein:creatinine ratio, and fetal assessment (CTG, growth/Doppler as indicated) to be arranged on arrival.",
+        "Escalate to obstetric team immediately."
+      ],
+      "phoneScript": "Tell her this blood pressure reading needs checking in hospital today, right away — please come in now, or call 999 if she also feels unwell, has severe headache, visual changes, or pain under the ribs.",
+      "safetyNetting": [
+        "Call 999 immediately if a seizure occurs, or if she develops severe headache, visual loss, confusion, or feels very unwell before arrival."
+      ],
+      "documentationPrompts": [
+        "BP reading(s) and time taken.",
+        "Symptoms screened for and result.",
+        "Time of referral/admission and by whom.",
+        "Fetal movements."
+      ],
+      "citations": [
+        {
+          "guideline": "NG133",
+          "section": "Hypertension in pregnancy — severe hypertension (BP ≥160/110 mmHg): admit",
+          "checked": "2026-07-22"
+        }
+      ]
+    },
+    "pe-outcome-red-severefeatures": {
+      "type": "outcome",
+      "id": "pe-outcome-red-severefeatures",
+      "category": "RED",
+      "title": "Suspected severe pre-eclampsia (raised BP with severe symptoms)",
+      "target": "Immediate — same-day emergency admission",
+      "actions": [
+        "Arrange immediate transfer for admission.",
+        "Full pre-eclampsia bloods (FBC, U&E, LFTs), urine protein:creatinine ratio, and fetal assessment (CTG, growth/Doppler as indicated) on arrival.",
+        "Escalate to obstetric team immediately — anticipate need for antihypertensive treatment and magnesium sulfate per local protocol if severe features confirmed.",
+        "See Eclampsia emergency drill if any seizure activity develops."
+      ],
+      "phoneScript": "Tell her these symptoms together with her blood pressure need checking in hospital right away — please come in now, or call 999 if symptoms are worsening quickly or she feels very unwell.",
+      "safetyNetting": [
+        "Call 999 immediately if a seizure occurs, or if symptoms worsen rapidly on the way in."
+      ],
+      "documentationPrompts": [
+        "BP reading(s).",
+        "Symptoms present and severity/duration.",
+        "Time of referral/admission.",
+        "Fetal movements."
+      ],
+      "citations": [
+        {
+          "guideline": "NG133",
+          "section": "Hypertension in pregnancy — features of severe pre-eclampsia warranting admission",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    },
+    "pe-outcome-orange-raisedbp": {
+      "type": "outcome",
+      "id": "pe-outcome-orange-raisedbp",
+      "category": "ORANGE",
+      "title": "Raised blood pressure (140/90–159/109 mmHg), no severe symptoms",
+      "target": "Seen within 15 minutes (face-to-face) / attend within the hour (phone)",
+      "actions": [
+        "Arrange same-day assessment — repeat BP, urine protein:creatinine ratio, pre-eclampsia bloods (FBC, U&E, LFTs).",
+        "Fetal assessment — CTG and consider growth/Doppler review if not recently done.",
+        "Discuss with obstetric team; consider need for antihypertensive treatment per local protocol."
+      ],
+      "phoneScript": "Tell her this blood pressure needs checking today — please come in so we can repeat it, check her urine, and take some bloods.",
+      "safetyNetting": [
+        "Come in immediately, any time, if she develops headache, visual disturbance, pain under the ribs, sudden swelling, or feels unwell before her appointment."
+      ],
+      "documentationPrompts": [
+        "BP reading(s) and time.",
+        "Symptoms screened for — all negative.",
+        "Plan for bloods/urine/fetal assessment."
+      ],
+      "citations": [
+        {
+          "guideline": "NG133",
+          "section": "Hypertension in pregnancy — management of non-severe hypertension",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    },
+    "pe-outcome-orange-symptomsnormalbp": {
+      "type": "outcome",
+      "id": "pe-outcome-orange-symptomsnormalbp",
+      "category": "ORANGE",
+      "title": "Possible pre-eclampsia symptoms with normal or unknown blood pressure",
+      "target": "Seen within 15 minutes (face-to-face) / attend within the hour (phone)",
+      "actions": [
+        "Arrange same-day assessment — pre-eclampsia symptoms warrant BP and urine protein checked even if a previous reading was normal, since pre-eclampsia can progress quickly.",
+        "Full pre-eclampsia bloods (FBC, U&E, LFTs) and fetal assessment (CTG).",
+        "Discuss with obstetric team."
+      ],
+      "phoneScript": "Even though her blood pressure was normal before, these symptoms need checking today — please come in so we can reassess.",
+      "safetyNetting": [
+        "Come in immediately, any time, if symptoms worsen, vision changes further, or she feels unwell before her appointment."
+      ],
+      "documentationPrompts": [
+        "Symptom(s) present and duration.",
+        "Most recent BP reading and when taken.",
+        "Plan for bloods/urine/fetal assessment."
+      ],
+      "citations": [
+        {
+          "guideline": "NG133",
+          "section": "Hypertension in pregnancy — symptomatic screening for pre-eclampsia",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    },
+    "pe-outcome-yellow-riskfactors": {
+      "type": "outcome",
+      "id": "pe-outcome-yellow-riskfactors",
+      "category": "YELLOW",
+      "title": "Headache with pre-eclampsia risk factors, no red-flag symptoms",
+      "target": "Seen within 1 hour (face-to-face) / same-day assessment (phone)",
+      "actions": [
+        "Arrange same-day BP and urinalysis given risk factor(s) present, even without severe symptoms.",
+        "Simple analgesia advice per local formulary — the app does not give medication doses; signpost to local guidance/BNF."
+      ],
+      "phoneScript": "Given her history, tell her this still needs a blood pressure and urine check today, even though it sounds like a simple headache.",
+      "safetyNetting": [
+        "Come in immediately, any time, if visual disturbance, pain under the ribs, sudden swelling, or feeling generally unwell develop."
+      ],
+      "documentationPrompts": [
+        "Risk factor(s) present.",
+        "Headache characteristics.",
+        "BP/urinalysis plan."
+      ],
+      "citations": [
+        {
+          "guideline": "NG133",
+          "section": "Hypertension in pregnancy — risk factors for pre-eclampsia",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    },
+    "pe-outcome-green": {
+      "type": "outcome",
+      "id": "pe-outcome-green",
+      "category": "GREEN",
+      "title": "Simple headache, no red-flag features or risk factors",
+      "target": "Non-urgent — advice with safety-netting",
+      "actions": [
+        "Reassure and advise simple measures (rest, hydration); signpost to local/BNF guidance for analgesia in pregnancy rather than giving medication advice directly.",
+        "Advise BP check at next routine contact if not done recently."
+      ],
+      "phoneScript": "Explain this sounds like a simple headache, but she should contact us again straight away — any time — if she notices visual changes, pain under the ribs, swelling, or if the headache becomes severe or doesn't settle.",
+      "safetyNetting": [
+        "Contact the unit again immediately if visual disturbance, epigastric pain, sudden swelling, or severe/persistent headache develop."
+      ],
+      "documentationPrompts": [
+        "Headache characteristics and duration.",
+        "Symptoms and risk factors screened — all negative.",
+        "Advice given."
+      ],
+      "citations": [
+        {
+          "guideline": "NG133",
+          "section": "Hypertension in pregnancy — symptomatic screening for pre-eclampsia",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    }
+  }
+}

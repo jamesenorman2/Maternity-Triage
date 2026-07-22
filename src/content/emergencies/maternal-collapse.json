@@ -1,0 +1,51 @@
+{
+  "id": "em-collapse",
+  "title": "Maternal collapse",
+  "section": "emergency",
+  "summary": "Sudden collapse or unresponsiveness in a pregnant or postnatal woman.",
+  "lastReviewed": "2026-07-22",
+  "openingFields": [],
+  "startNode": "collapse-outcome",
+  "nodes": {
+    "collapse-outcome": {
+      "type": "outcome",
+      "id": "collapse-outcome",
+      "category": "RED",
+      "title": "Maternal collapse — emergency drill",
+      "target": "Immediate — call for help now",
+      "actions": [
+        "Call 2222 / put out the emergency obstetric and cardiac arrest call per local protocol; call 999 if outside a hospital setting.",
+        "A–E assessment: Airway, Breathing, Circulation, Disability, Exposure.",
+        "If ≥20 weeks gestation (or fundus at/above umbilicus): manual left lateral uterine displacement or full lateral tilt to relieve aortocaval compression — VERIFY exact gestation threshold locally.",
+        "If no signs of life: start CPR immediately using standard compression ratios with maternal modifications — chest compressions slightly higher on the sternum, continuous left uterine displacement during compressions.",
+        "Consider and treat reversible causes (4 Hs and 4 Ts) plus obstetric-specific causes: haemorrhage, eclampsia, amniotic fluid embolism, high regional block, local anaesthetic toxicity, sepsis, pulmonary embolism, cardiac disease.",
+        "If no output within 4 minutes and gestation viable, prepare for perimortem caesarean birth on-site — VERIFY exact timing and activation route per local protocol.",
+        "Call for senior obstetric, anaesthetic, and neonatal support immediately."
+      ],
+      "phoneScript": "",
+      "safetyNetting": [],
+      "documentationPrompts": [
+        "Time of collapse and time help called.",
+        "A–E findings at each assessment.",
+        "Interventions performed and times (uterine displacement, CPR start, drugs given, perimortem CS if performed).",
+        "Team members present."
+      ],
+      "citations": [
+        {
+          "guideline": "RCOG",
+          "section": "GTG 56 — Maternal Collapse in Pregnancy and the Puerperium",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        },
+        {
+          "guideline": "Resuscitation Council UK",
+          "section": "Maternal resuscitation modifications",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        }
+      ]
+    }
+  }
+}

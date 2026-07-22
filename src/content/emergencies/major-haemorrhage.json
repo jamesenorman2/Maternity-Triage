@@ -1,0 +1,52 @@
+{
+  "id": "em-major-haemorrhage",
+  "title": "Major obstetric haemorrhage",
+  "section": "emergency",
+  "summary": "Major antepartum, intrapartum, or postpartum haemorrhage with or without signs of shock.",
+  "lastReviewed": "2026-07-22",
+  "openingFields": [],
+  "startNode": "mh-outcome",
+  "nodes": {
+    "mh-outcome": {
+      "type": "outcome",
+      "id": "mh-outcome",
+      "category": "RED",
+      "title": "Major obstetric haemorrhage — emergency drill",
+      "target": "Immediate — call for help now",
+      "actions": [
+        "Call for help immediately — put out the major obstetric haemorrhage call per local protocol; call 999 if outside a hospital setting.",
+        "A–E assessment; high-flow oxygen; two large-bore IV cannulae; take bloods for FBC, coagulation, group & crossmatch, fibrinogen.",
+        "Start warmed IV crystalloid while awaiting blood products; activate massive transfusion protocol per local thresholds — VERIFY local trigger volumes.",
+        "For postpartum haemorrhage: rub up the fundus, empty the bladder (catheterise), and give uterotonics per local protocol/PGD — VERIFY drug, dose and sequence locally.",
+        "Identify and treat the cause using the 4 Ts: Tone (uterine atony), Trauma (genital tract), Tissue (retained placenta/products), Thrombin (coagulopathy).",
+        "For antepartum haemorrhage: do not perform digital vaginal examination until placenta praevia excluded; continuous fetal monitoring once available.",
+        "Keep a running total of estimated blood loss and call for senior obstetric/anaesthetic/haematology input early — do not wait for deterioration."
+      ],
+      "phoneScript": "If this is identified by phone (e.g. reported heavy bleeding at home): call 999 immediately, advise her to lie down with legs raised if able and not to drive, and stay on the line for further instructions.",
+      "safetyNetting": [],
+      "documentationPrompts": [
+        "Time bleeding identified/reported and time help called.",
+        "Estimated blood loss, running total.",
+        "Vital signs over time.",
+        "Interventions given (fluids, uterotonics, blood products) with times and doses.",
+        "Cause identified (4 Ts) and definitive management."
+      ],
+      "citations": [
+        {
+          "guideline": "RCOG",
+          "section": "GTG 52 — Prevention and Management of Postpartum Haemorrhage",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        },
+        {
+          "guideline": "RCOG",
+          "section": "GTG 63 — Antepartum Haemorrhage",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        }
+      ]
+    }
+  }
+}

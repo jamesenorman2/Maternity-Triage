@@ -1,0 +1,56 @@
+{
+  "id": "em-sepsis",
+  "title": "Suspected maternal sepsis",
+  "section": "emergency",
+  "summary": "Suspected sepsis in pregnancy, labour, or the puerperium — a leading cause of direct maternal death.",
+  "lastReviewed": "2026-07-22",
+  "openingFields": [],
+  "startNode": "sepsis-outcome",
+  "nodes": {
+    "sepsis-outcome": {
+      "type": "outcome",
+      "id": "sepsis-outcome",
+      "category": "RED",
+      "title": "Suspected maternal sepsis — emergency drill (Sepsis Six)",
+      "target": "Immediate — call for help now",
+      "actions": [
+        "Call for help immediately and escalate to the obstetric/medical team — maternal sepsis can progress extremely rapidly and is a leading cause of direct maternal death.",
+        "Recognise red-flag features: temperature <36°C or >38°C, tachycardia, tachypnoea, hypotension, reduced consciousness/confusion, mottled or ashen skin, non-blanching rash, or maternal concern that 'something is wrong' — VERIFY exact NEWS2/MEOWS trigger thresholds locally.",
+        "Give Sepsis Six within one hour: (1) high-flow oxygen, (2) blood cultures before antibiotics, (3) IV broad-spectrum antibiotics per local protocol, (4) IV fluid resuscitation, (5) check lactate, (6) monitor urine output — VERIFY exact antibiotic choice/dose against local protocol.",
+        "Identify likely source — consider chorioamnionitis, endometritis, urinary tract, wound/perineal infection, mastitis, pneumonia — and treat/escalate source control as needed.",
+        "Continuous maternal observations (NEWS2/MEOWS) and fetal monitoring if antenatal/intrapartum.",
+        "Involve senior obstetric, anaesthetic/critical care, and microbiology early if any red-flag feature or failure to improve."
+      ],
+      "phoneScript": "If red-flag features are reported by phone (fever with rigors, feeling very unwell, confusion, breathlessness): advise her to call 999 or come to the emergency department immediately — do not wait for a routine appointment.",
+      "safetyNetting": [],
+      "documentationPrompts": [
+        "Time of recognition and time help called.",
+        "NEWS2/MEOWS score and vital signs over time.",
+        "Sepsis Six elements — each with time completed.",
+        "Suspected source.",
+        "Senior review — time and outcome."
+      ],
+      "citations": [
+        {
+          "guideline": "NG51",
+          "section": "Sepsis — recognition, diagnosis and early management",
+          "checked": "2026-07-22",
+          "verify": true
+        },
+        {
+          "guideline": "RCOG",
+          "section": "GTG 64a/64b — Bacterial Sepsis in Pregnancy / Following Pregnancy",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        },
+        {
+          "guideline": "MBRRACE-UK",
+          "section": "Maternal mortality reports — sepsis as a leading direct cause of death",
+          "checked": "2026-07-22",
+          "verify": true
+        }
+      ]
+    }
+  }
+}

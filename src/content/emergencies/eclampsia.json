@@ -1,0 +1,52 @@
+{
+  "id": "em-eclampsia",
+  "title": "Eclampsia (seizure)",
+  "section": "emergency",
+  "summary": "Convulsive seizure in pregnancy, labour, or postnatally in a woman with or without known pre-eclampsia.",
+  "lastReviewed": "2026-07-22",
+  "openingFields": [],
+  "startNode": "eclampsia-outcome",
+  "nodes": {
+    "eclampsia-outcome": {
+      "type": "outcome",
+      "id": "eclampsia-outcome",
+      "category": "RED",
+      "title": "Eclampsia — emergency drill",
+      "target": "Immediate — call for help now",
+      "actions": [
+        "Call 2222 / emergency obstetric call per local protocol; call 999 if outside a hospital setting.",
+        "Protect from injury; do not restrain; place in left lateral position once seizure allows; maintain airway.",
+        "Give high-flow oxygen; A–E assessment.",
+        "Magnesium sulfate is the treatment of choice for seizure control and prevention of further seizures — administer per local protocol/PGD. VERIFY exact dose and regimen against current local guideline before giving.",
+        "Control severe hypertension per local antihypertensive protocol if BP ≥160/110 mmHg — VERIFY agent and dose locally.",
+        "Continuous fetal and maternal monitoring once safe to apply.",
+        "Plan for birth once mother stabilised — timing is an obstetric decision, not delayed for convenience.",
+        "Strict fluid balance — avoid fluid overload (risk of pulmonary oedema)."
+      ],
+      "phoneScript": "",
+      "safetyNetting": [],
+      "documentationPrompts": [
+        "Time seizure started/ended and description.",
+        "Time help called and team members present.",
+        "Magnesium sulfate — dose, route, time given.",
+        "BP readings and antihypertensive given if applicable.",
+        "Fetal status once monitored."
+      ],
+      "citations": [
+        {
+          "guideline": "NG133",
+          "section": "Hypertension in pregnancy — eclampsia management, magnesium sulfate",
+          "checked": "2026-07-22",
+          "verify": true
+        },
+        {
+          "guideline": "Resuscitation Council UK",
+          "section": "Maternal resuscitation modifications",
+          "checked": "2026-07-22",
+          "nonNice": true,
+          "verify": true
+        }
+      ]
+    }
+  }
+}
