@@ -7,8 +7,10 @@ import OutcomeScreen from "./components/OutcomeScreen";
 import EmergenciesDrawer from "./components/EmergenciesDrawer";
 import ContentStatusScreen from "./components/ContentStatusScreen";
 import ThemeToggle from "./components/ThemeToggle";
+import InstallButton from "./components/InstallButton";
 import { TriageProvider, useTriage } from "./state/TriageContext";
 import { ThemeProvider } from "./state/ThemeContext";
+import { InstallPromptProvider } from "./state/InstallPromptContext";
 
 function TriageRouter() {
   const { pathway, opening, currentNodeId } = useTriage();
@@ -43,6 +45,7 @@ function AppShell() {
             🚨 Emergencies
           </button>
         )}
+        <InstallButton />
         <ThemeToggle />
       </div>
 
@@ -58,9 +61,11 @@ function AppShell() {
 export default function App() {
   return (
     <ThemeProvider>
-      <TriageProvider>
-        <AppShell />
-      </TriageProvider>
+      <InstallPromptProvider>
+        <TriageProvider>
+          <AppShell />
+        </TriageProvider>
+      </InstallPromptProvider>
     </ThemeProvider>
   );
 }

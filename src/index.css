@@ -85,7 +85,8 @@ p {
 
 .icon-btn,
 .theme-toggle,
-.toolbar-emergency-btn {
+.toolbar-emergency-btn,
+.install-btn {
   min-height: 44px;
   padding: 8px 14px;
   border-radius: 10px;
@@ -93,6 +94,12 @@ p {
   background: var(--bg-elevated);
   color: var(--text);
   font-size: 0.95rem;
+}
+
+.install-btn {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .toolbar-emergency-btn {
