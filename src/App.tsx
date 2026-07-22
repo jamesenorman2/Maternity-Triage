@@ -26,7 +26,7 @@ function TriageRouter() {
 
 function AppShell() {
   const { pathway } = useTriage();
-  const [showAbout, setShowAbout] = useState(true);
+  const [showAbout, setShowAbout] = useState(false);
   const [showEmergencies, setShowEmergencies] = useState(false);
   const [showContentStatus, setShowContentStatus] = useState(false);
   const isEmergencyDrill = pathway?.section === "emergency";

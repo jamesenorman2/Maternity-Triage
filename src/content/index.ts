@@ -3,6 +3,7 @@ import type { Pathway } from "./schema";
 import reducedFetalMovements from "./pathways/antenatal/reduced-fetal-movements.json";
 import antenatalBleeding from "./pathways/antenatal/vaginal-bleeding.json";
 import preEclampsiaScreen from "./pathways/antenatal/headache-visual-epigastric.json";
+import abdominalPain from "./pathways/antenatal/abdominal-pain.json";
 
 import maternalCollapse from "./emergencies/maternal-collapse.json";
 import eclampsia from "./emergencies/eclampsia.json";
@@ -17,6 +18,7 @@ export const pathways: Pathway[] = [
   reducedFetalMovements as Pathway,
   antenatalBleeding as Pathway,
   preEclampsiaScreen as Pathway,
+  abdominalPain as Pathway,
 ];
 
 export const emergencyDrills: Pathway[] = [

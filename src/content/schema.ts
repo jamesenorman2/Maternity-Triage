@@ -72,6 +72,8 @@ export interface Pathway {
   section: PathwaySection;
   /** One-line summary shown in the presenting-complaint list. */
   summary: string;
+  /** Lay-language synonyms so free-text search finds this pathway (e.g. "RIF pain", "appendicitis", "stitch"). */
+  keywords?: string[];
   lastReviewed: string;
   /** Universal-opening-question fields relevant to this pathway. */
   openingFields: OpeningField[];

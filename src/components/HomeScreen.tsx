@@ -19,9 +19,14 @@ export default function HomeScreen() {
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return pathways;
-    return pathways.filter(
-      (p) => p.title.toLowerCase().includes(q) || p.summary.toLowerCase().includes(q)
-    );
+    const words = q.split(/\s+/).filter(Boolean);
+    return pathways.filter((p) => {
+      const haystack = [p.title, p.summary, ...(p.keywords ?? [])].join(" ").toLowerCase();
+      // Every typed word must appear somewhere in the pathway's title/summary/keywords —
+      // lets free text like "left sided pain" or "appendix" find the right pathway
+      // without needing an exact phrase match.
+      return words.every((w) => haystack.includes(w));
+    });
   }, [query]);
 
   const grouped = useMemo(() => {

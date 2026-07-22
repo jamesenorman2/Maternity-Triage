@@ -3,6 +3,7 @@
   "title": "Headache, visual disturbance or epigastric pain (pre-eclampsia screen)",
   "section": "antenatal",
   "summary": "Headache, visual symptoms, epigastric/RUQ pain, or a raised blood pressure reading — screening for pre-eclampsia.",
+  "keywords": ["headache", "blood pressure", "BP", "high blood pressure", "flashing lights", "blurred vision", "swelling", "puffy", "pre-eclampsia", "preeclampsia", "migraine", "seeing stars"],
   "lastReviewed": "2026-07-22",
   "openingFields": [
     { "id": "gestation", "label": "Gestation (weeks+days)", "kind": "gestation" },

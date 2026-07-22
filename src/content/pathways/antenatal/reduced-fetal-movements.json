@@ -3,6 +3,7 @@
   "title": "Reduced fetal movements",
   "section": "antenatal",
   "summary": "Any reported reduction, change, or absence of fetal movements from 24+0 weeks.",
+  "keywords": ["baby not moving", "quiet baby", "stopped kicking", "no movements", "less movement", "movements reduced", "reduced movements", "not felt baby move", "baby has gone quiet", "RFM"],
   "lastReviewed": "2026-07-22",
   "openingFields": [
     { "id": "gestation", "label": "Gestation (weeks+days)", "kind": "gestation" },

@@ -3,6 +3,7 @@
   "title": "Vaginal bleeding in pregnancy",
   "section": "antenatal",
   "summary": "Any bleeding from the genital tract in pregnancy, before onset of labour.",
+  "keywords": ["spotting", "blood", "PV bleed", "period-like bleeding", "bleeding in pregnancy", "blood loss", "clots", "miscarriage", "ectopic", "placenta praevia", "abruption"],
   "lastReviewed": "2026-07-22",
   "openingFields": [
     { "id": "gestation", "label": "Gestation (weeks+days)", "kind": "gestation" },

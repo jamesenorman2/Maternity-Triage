@@ -1,7 +1,3 @@
-interface Props {
-  onDismiss?: () => void;
-}
-
 export function IntendedUseStatement() {
   return (
     <>
@@ -20,17 +16,17 @@ export function IntendedUseStatement() {
   );
 }
 
-export default function IntendedUseModal({ onDismiss }: Props) {
+export default function IntendedUseModal({ onDismiss }: { onDismiss: () => void }) {
   return (
     <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="intended-use-title">
       <div className="modal-card">
-        <h1 id="intended-use-title">Before you start</h1>
-        <IntendedUseStatement />
-        {onDismiss && (
-          <button className="btn btn-primary btn-large" onClick={onDismiss} autoFocus>
-            I understand — continue
+        <div className="emergencies-header">
+          <h1 id="intended-use-title">About this app</h1>
+          <button className="icon-btn" onClick={onDismiss} aria-label="Close">
+            ✕
           </button>
-        )}
+        </div>
+        <IntendedUseStatement />
       </div>
     </div>
   );
