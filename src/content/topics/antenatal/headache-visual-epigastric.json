@@ -1,0 +1,96 @@
+{
+  "id": "pe",
+  "title": "Headache, visual disturbance or epigastric pain (pre-eclampsia screen)",
+  "section": "antenatal",
+  "summary": "Headache, visual symptoms, epigastric/RUQ pain, or a raised blood pressure reading — screening for pre-eclampsia.",
+  "keywords": ["headache", "blood pressure", "BP", "high blood pressure", "flashing lights", "blurred vision", "swelling", "puffy", "pre-eclampsia", "preeclampsia", "migraine", "seeing stars"],
+  "lastReviewed": "2026-07-22",
+  "redFlags": [
+    "BP ≥160/110 mmHg — admit regardless of symptoms.",
+    "Visual disturbance (flashing lights, blurring, or loss of vision), a severe headache not relieved by usual analgesia, epigastric/right-upper-quadrant pain, or persistent vomiting with headache — screen for at every contact, whatever the BP."
+  ],
+  "blocks": [
+    {
+      "heading": "Severe hypertension — BP ≥160/110 mmHg",
+      "bullets": [
+        "Arrange immediate transfer for admission — severe hypertension requires urgent assessment and treatment regardless of symptoms.",
+        "Repeat BP measurement to confirm; do not delay referral awaiting repeat if clearly severe.",
+        "Full pre-eclampsia bloods (FBC, U&E, LFTs), urine protein:creatinine ratio, and fetal assessment (CTG, growth/Doppler as indicated) arranged on arrival.",
+        "Escalate to obstetric team immediately.",
+        "Safety-net: call 999 immediately if a seizure occurs, or if severe headache, visual loss, confusion, or feeling very unwell develop before arrival."
+      ]
+    },
+    {
+      "heading": "Raised BP (140/90–159/109 mmHg) with severe symptoms present",
+      "bullets": [
+        "Treat as suspected severe pre-eclampsia — arrange immediate transfer for admission.",
+        "Full pre-eclampsia bloods and fetal assessment (CTG, growth/Doppler as indicated) on arrival.",
+        "Escalate to obstetric team immediately — anticipate need for antihypertensive treatment and magnesium sulfate per local protocol if severe features confirmed.",
+        "See the Eclampsia emergency drill if any seizure activity develops."
+      ]
+    },
+    {
+      "heading": "Raised BP (140/90–159/109 mmHg), no severe symptoms",
+      "bullets": [
+        "Arrange same-day assessment — repeat BP, urine protein:creatinine ratio, pre-eclampsia bloods (FBC, U&E, LFTs).",
+        "Fetal assessment — CTG and consider growth/Doppler review if not recently done.",
+        "Discuss with obstetric team; consider need for antihypertensive treatment per local protocol.",
+        "Seen within 15 minutes (face-to-face) / attend within the hour (phone)."
+      ]
+    },
+    {
+      "heading": "Severe symptoms with normal or unknown BP",
+      "bullets": [
+        "Arrange same-day assessment — pre-eclampsia symptoms warrant BP and urine protein checked even if a previous reading was normal, since pre-eclampsia can progress quickly.",
+        "Full pre-eclampsia bloods (FBC, U&E, LFTs) and fetal assessment (CTG).",
+        "Discuss with obstetric team.",
+        "Seen within 15 minutes (face-to-face) / attend within the hour (phone)."
+      ]
+    },
+    {
+      "heading": "Risk factors present, no red-flag symptoms",
+      "bullets": [
+        "Risk factors: first pregnancy, previous pre-eclampsia, chronic hypertension, pre-existing diabetes, multiple pregnancy, BMI over 35, maternal age 40 or over, family history.",
+        "Arrange same-day BP and urinalysis given risk factor(s) present, even without severe symptoms.",
+        "Simple analgesia advice per local formulary — signpost to local guidance/BNF rather than giving medication advice directly.",
+        "Seen within 1 hour (face-to-face) / same-day assessment (phone)."
+      ]
+    },
+    {
+      "heading": "Simple headache, no red flags or risk factors",
+      "bullets": [
+        "Reassure and advise simple measures (rest, hydration); signpost to local/BNF guidance for analgesia in pregnancy.",
+        "Advise BP check at next routine contact if not done recently."
+      ]
+    },
+    {
+      "heading": "Safety-netting to give",
+      "bullets": [
+        "Contact the unit again immediately if visual disturbance, epigastric pain, sudden swelling, or a severe/persistent headache develop.",
+        "Call 999 immediately if a seizure occurs at any point."
+      ]
+    },
+    {
+      "heading": "What to document",
+      "bullets": [
+        "BP reading(s) and time taken.",
+        "Symptoms screened for and result (positive/negative for each).",
+        "Risk factors present.",
+        "Plan for bloods/urine/fetal assessment and time of referral/admission."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "NG133",
+      "section": "Hypertension in pregnancy — severe hypertension threshold (BP ≥160/110 mmHg = admit)",
+      "checked": "2026-07-22"
+    },
+    {
+      "guideline": "NG133",
+      "section": "Hypertension in pregnancy — features of severe pre-eclampsia and risk factors",
+      "checked": "2026-07-22",
+      "verify": true
+    }
+  ]
+}

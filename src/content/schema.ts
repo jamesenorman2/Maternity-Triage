@@ -1,9 +1,8 @@
-// Content schema for triage pathway files.
+// Content schema for midwifery reference topics.
 // Clinical content lives entirely in these structured data files, separate
-// from the engine. The engine (src/engine) only knows how to render whatever
-// shape is defined here — it must never encode clinical logic itself.
-
-export type Category = "RED" | "ORANGE" | "YELLOW" | "GREEN";
+// from the engine. The engine (src/components, src/state) only knows how to
+// render whatever shape is defined here — it must never encode clinical
+// content itself.
 
 export interface Citation {
   /** Guideline ID, e.g. "NG201" or "RCOG GTG 52". */
@@ -20,63 +19,26 @@ export interface Citation {
   verify?: boolean;
 }
 
-export interface Answer {
-  label: string;
-  /** Optional shorter/alternate label for phone channel. */
-  phoneLabel?: string;
-  next: string;
+/** One labelled group of bullet points within a topic, e.g. "If BP ≥160/110". */
+export interface ContentBlock {
+  heading: string;
+  bullets: string[];
 }
 
-export interface QuestionNode {
-  type: "question";
-  id: string;
-  text: string;
-  /** Wording for the clinician to read out on a phone triage call. */
-  phoneText?: string;
-  /** True if this question is asking about a red-flag / short-circuit symptom. */
-  redFlag?: boolean;
-  answers: Answer[];
-  citation?: Citation;
-}
+export type TopicSection = "antenatal" | "intrapartum" | "postnatal" | "emergency" | "trust";
 
-export interface OutcomeNode {
-  type: "outcome";
-  id: string;
-  category: Category;
-  title: string;
-  /** Disposition target, e.g. "Seen within 15 minutes" or "Attend now". */
-  target: string;
-  actions: string[];
-  /** Script for phone channel only; omitted actions imply face-to-face wording is used instead. */
-  phoneScript?: string;
-  safetyNetting: string[];
-  documentationPrompts: string[];
-  citations: Citation[];
-}
-
-export type PathwayNode = QuestionNode | OutcomeNode;
-
-export type PathwaySection = "antenatal" | "intrapartum" | "postnatal" | "emergency";
-
-export interface OpeningField {
-  id: string;
-  label: string;
-  /** "gestation" | "postnatalDays" | "parity" | "riskFactors" | "text" */
-  kind: "gestation" | "postnatalDays" | "parity" | "riskFactors" | "text";
-  options?: string[];
-}
-
-export interface Pathway {
+export interface ReferenceTopic {
   id: string;
   title: string;
-  section: PathwaySection;
-  /** One-line summary shown in the presenting-complaint list. */
+  section: TopicSection;
+  /** One-line summary shown in the browse list. */
   summary: string;
-  /** Lay-language synonyms so free-text search finds this pathway (e.g. "RIF pain", "appendicitis", "stitch"). */
+  /** Lay-language synonyms so free-text search finds this topic (e.g. "RIF pain", "appendicitis", "stitch"). */
   keywords?: string[];
   lastReviewed: string;
-  /** Universal-opening-question fields relevant to this pathway. */
-  openingFields: OpeningField[];
-  startNode: string;
-  nodes: Record<string, PathwayNode>;
+  /** Headline red-flag bullets shown prominently at the top of the card. */
+  redFlags?: string[];
+  /** Main body of the reference card, in display order. */
+  blocks: ContentBlock[];
+  citations: Citation[];
 }

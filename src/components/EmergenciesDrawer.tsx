@@ -1,8 +1,8 @@
-import { emergencyDrills } from "../content";
-import { useTriage } from "../state/TriageContext";
+import { emergencyTopics } from "../content";
+import { useContent } from "../state/ContentContext";
 
 export default function EmergenciesDrawer({ onClose }: { onClose: () => void }) {
-  const { startPathway } = useTriage();
+  const { selectTopic } = useContent();
 
   return (
     <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="emergencies-title">
@@ -13,18 +13,18 @@ export default function EmergenciesDrawer({ onClose }: { onClose: () => void }) 
             ✕
           </button>
         </div>
-        <p className="subtitle">One-tap quick-reference drills. These skip the question set.</p>
+        <p className="subtitle">One-tap quick-reference drills.</p>
         <div className="emergency-list">
-          {emergencyDrills.map((p) => (
+          {emergencyTopics.map((t) => (
             <button
-              key={p.id}
+              key={t.id}
               className="emergency-btn"
               onClick={() => {
-                startPathway(p);
+                selectTopic(t);
                 onClose();
               }}
             >
-              {p.title}
+              {t.title}
             </button>
           ))}
         </div>

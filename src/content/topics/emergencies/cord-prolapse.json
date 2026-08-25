@@ -3,17 +3,12 @@
   "title": "Cord prolapse",
   "section": "emergency",
   "summary": "Umbilical cord palpated or visible below/alongside the presenting part, membranes ruptured.",
+  "keywords": ["cord prolapse", "cord below presenting part", "knee chest position", "category 1"],
   "lastReviewed": "2026-07-22",
-  "openingFields": [],
-  "startNode": "cord-outcome",
-  "nodes": {
-    "cord-outcome": {
-      "type": "outcome",
-      "id": "cord-outcome",
-      "category": "RED",
-      "title": "Cord prolapse — emergency drill",
-      "target": "Immediate — call for help now",
-      "actions": [
+  "blocks": [
+    {
+      "heading": "Actions",
+      "bullets": [
         "Call for emergency help immediately — obstetric, anaesthetic and neonatal teams; category 1 caesarean unless imminent vaginal birth.",
         "Minimise handling of the cord; if outside the vagina, keep it warm and moist but do not push it back in.",
         "Relieve pressure on the cord: manually elevate the presenting part with a hand in the vagina, and/or knee-chest or exaggerated Sitting-Trendelenburg/left-lateral with hips elevated — VERIFY preferred local positioning technique.",
@@ -21,24 +16,31 @@
         "Continuous fetal monitoring if available without delaying transfer/delivery.",
         "Tocolysis may be considered by the obstetric team to reduce contractions while preparing for birth — VERIFY local protocol.",
         "Move rapidly to theatre — do not delay transfer to attempt non-essential steps."
-      ],
-      "phoneScript": "If this is identified during a home assessment or the woman describes feeling something in the vagina after membranes rupture: call 999 immediately, advise the knee-chest position, and stay on the line for further instructions while the ambulance is en route.",
-      "safetyNetting": [],
-      "documentationPrompts": [
+      ]
+    },
+    {
+      "heading": "If identified by phone",
+      "bullets": [
+        "If this is identified during a home assessment or the woman describes feeling something in the vagina after membranes rupture: call 999 immediately, advise the knee-chest position, and stay on the line for further instructions while the ambulance is en route."
+      ]
+    },
+    {
+      "heading": "What to document",
+      "bullets": [
         "Time cord prolapse identified.",
         "Fetal heart rate at identification and subsequently.",
         "Position/manoeuvres used and time.",
         "Time of emergency call and time of birth."
-      ],
-      "citations": [
-        {
-          "guideline": "RCOG",
-          "section": "GTG 50 — Umbilical Cord Prolapse",
-          "checked": "2026-07-22",
-          "nonNice": true,
-          "verify": true
-        }
       ]
     }
-  }
+  ],
+  "citations": [
+    {
+      "guideline": "RCOG",
+      "section": "GTG 50 — Umbilical Cord Prolapse",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
 }

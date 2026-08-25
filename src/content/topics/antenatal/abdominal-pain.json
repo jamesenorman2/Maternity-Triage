@@ -1,0 +1,232 @@
+{
+  "id": "abdo",
+  "title": "Abdominal pain in pregnancy",
+  "section": "antenatal",
+  "summary": "Any abdominal, side, or pelvic pain in pregnancy — includes ruling out ectopic, ovarian cyst accident, appendicitis, abruption, UTI, and labour before reassuring round ligament pain, pelvic girdle pain, or constipation.",
+  "keywords": [
+    "left sided pain", "right sided pain", "left side pain", "right side pain", "side pain", "one sided pain",
+    "stomach pain", "tummy pain", "belly pain", "abdo pain", "cramping", "cramps", "sharp pain", "stitch",
+    "round ligament", "appendicitis", "appendix", "RIF pain", "LIF pain", "right iliac fossa", "groin pain",
+    "pelvic pain", "period pain", "tightenings", "Braxton Hicks", "kidney pain", "loin pain", "UTI", "water infection",
+    "ovarian cyst", "cyst torsion", "twisted cyst", "ovary pain", "adnexal pain",
+    "SPD", "pelvic girdle pain", "PGP", "symphysis pubis", "pubic pain", "hip pain", "pubic bone pain",
+    "constipation", "trapped wind", "bloating", "can't poo", "straining"
+  ],
+  "lastReviewed": "2026-07-22",
+  "redFlags": [
+    "Signs of shock or collapse (faint/dizzy, racing heart, clammy, confused) — emergency, regardless of cause.",
+    "Severe, constant pain — not coming and going — especially with a very hard/tense tummy.",
+    "One-sided pain or shoulder-tip pain under 14 weeks — think ectopic.",
+    "Sudden severe one-sided pain with nausea/vomiting, especially with a known ovarian cyst, fibroid, or fertility treatment — think ovarian cyst accident (torsion/rupture)."
+  ],
+  "blocks": [
+    {
+      "heading": "Shock or collapse",
+      "bullets": [
+        "Call 999 / put out an emergency call per local protocol — do not drive her in.",
+        "Consider ectopic rupture, concealed placental abruption, ovarian cyst accident (torsion/rupture), or another acute abdominal emergency — do not wait to determine the exact cause before escalating.",
+        "Do not perform a digital vaginal examination — placenta praevia has not been excluded.",
+        "IV access, bloods including group & save/crossmatch, senior obstetric and (if not clearly obstetric) general surgical input.",
+        "See the Maternal collapse emergency drill for full A–E actions."
+      ]
+    },
+    {
+      "heading": "Severe, constant pain — suspected acute abdomen or concealed abruption",
+      "bullets": [
+        "Arrange immediate emergency transfer — do not wait for a routine slot.",
+        "At 24+ weeks: treat as suspected placental abruption even without visible bleeding (abruption can be concealed) — see Vaginal bleeding and Major obstetric haemorrhage; continuous fetal monitoring once available.",
+        "Under 24 weeks: consider ectopic rupture, ovarian cyst accident (torsion or rupture), or another surgical abdominal emergency — arrange emergency gynaecology/surgical assessment alongside obstetric review.",
+        "Do not perform a digital vaginal examination until placenta praevia excluded."
+      ]
+    },
+    {
+      "heading": "With vaginal bleeding",
+      "bullets": [
+        "Also work through the Vaginal bleeding in pregnancy topic — treat as antepartum haemorrhage (24+ weeks) or early-pregnancy bleeding (under 24 weeks) according to gestation; the same red-flag causes apply (abruption, ectopic, praevia).",
+        "Do not perform a digital vaginal examination until placenta praevia excluded.",
+        "Arrange same-day assessment with observations, fetal assessment as appropriate for gestation, and ultrasound."
+      ]
+    },
+    {
+      "heading": "Suspected ectopic pregnancy (under 14 weeks)",
+      "bullets": [
+        "One-sided pain, or pain at the tip of the shoulder.",
+        "Arrange emergency transfer for assessment — do not wait for a routine early pregnancy unit slot.",
+        "Early pregnancy unit or gynaecology emergency assessment with urgent ultrasound and beta-hCG.",
+        "Call 999 immediately if any signs of shock/collapse develop at any point."
+      ]
+    },
+    {
+      "heading": "Possible ovarian cyst accident (torsion or rupture) — any gestation",
+      "bullets": [
+        "Sudden severe onset, often one-sided, possibly with nausea/vomiting — particularly with a known ovarian cyst, fibroid, or fertility treatment; cannot be excluded by phone.",
+        "Arrange same-day joint obstetric and gynaecology assessment — ovarian torsion is time-critical for ovary-conserving surgery, so a low threshold for review is appropriate.",
+        "Pelvic/transvaginal ultrasound with Doppler flow assessment where available.",
+        "Ovarian cysts are more common in the first trimester (e.g. corpus luteal cysts) and with assisted conception, but torsion can occur at any gestation.",
+        "If signs of shock develop at any point (suggesting rupture with bleeding), escalate immediately as a maternal emergency."
+      ]
+    },
+    {
+      "heading": "Possible appendicitis — any gestation",
+      "bullets": [
+        "Pain in the lower right side of the tummy (early) or right side/atypical site (later), with loss of appetite, nausea/vomiting, or temperature; cannot be safely excluded remotely.",
+        "Arrange same-day joint obstetric and general surgical assessment.",
+        "Presentation is often atypical in pregnancy — as the uterus enlarges the appendix is displaced upward and laterally, so pain may not be in the classic right iliac fossa position, especially later in pregnancy — VERIFY this against a surgical reference before teaching it as fact.",
+        "Bloods (FBC, CRP) and urinalysis to help exclude a urinary cause; consider ultrasound; do not delay surgical review awaiting results.",
+        "Missed or delayed diagnosis carries higher rates of perforation and fetal loss — a low threshold for review is appropriate."
+      ]
+    },
+    {
+      "heading": "Possible UTI / pyelonephritis",
+      "bullets": [
+        "Fever, loin/flank pain, pain or burning passing urine, or needing to pass urine more often than usual.",
+        "Arrange same-day assessment — urine dipstick and midstream urine sample sent for culture.",
+        "If fever, loin pain, rigors, or feeling systemically unwell: treat as suspected pyelonephritis — admit, IV antibiotics per local protocol, consider a full sepsis screen (see Sepsis emergency drill if red-flag features).",
+        "If lower urinary symptoms only, without fever or systemic upset: treat per local UTI-in-pregnancy protocol — VERIFY current first-line antibiotic choice locally."
+      ]
+    },
+    {
+      "heading": "Possible labour",
+      "bullets": [
+        "Regular tightenings, coming and going in a pattern, getting closer together.",
+        "Under 37 weeks (suspected preterm labour): same-day assessment — speculum/vaginal exam for cervical change per local protocol; discuss antenatal corticosteroids and magnesium sulfate for fetal neuroprotection if very preterm — VERIFY exact gestation cut-offs and dosing locally; consider tocolysis and in-utero transfer if the unit lacks appropriate neonatal cot capacity.",
+        "37 weeks or more (possible labour at term): give standard advice on when to come in (e.g. regular strong contractions roughly every 3–5 minutes lasting 45–60 seconds, or waters breaking, or any bleeding) — VERIFY exact local admission criteria, as these vary by unit and parity."
+      ]
+    },
+    {
+      "heading": "With headache, visual disturbance, or epigastric pain",
+      "bullets": [
+        "This overlaps with the pre-eclampsia screen — work through the Headache, visual disturbance or epigastric pain topic for full BP-banded guidance.",
+        "In the meantime, arrange same-day blood pressure and urine protein check, plus pre-eclampsia bloods (FBC, U&E, LFTs) and fetal assessment (CTG)."
+      ]
+    },
+    {
+      "heading": "Likely pregnancy-related pelvic girdle pain (SPD)",
+      "bullets": [
+        "Pain over the pubic bone, groin, hips, or lower back — worse walking, climbing stairs, standing on one leg, or turning over in bed, sometimes with clicking or grinding.",
+        "Reassure this is common in pregnancy and usually mechanical, not a sign of a problem with the baby.",
+        "Refer to obstetric/pelvic health physiotherapy for assessment, exercises, and pelvic support belt advice — VERIFY local referral route and waiting time.",
+        "Practical advice: keep knees together getting in/out of a car or turning in bed, avoid provoking activities (wide-leg movements, standing on one leg to dress), take stairs one at a time."
+      ]
+    },
+    {
+      "heading": "Likely constipation",
+      "bullets": [
+        "Bloating, straining, infrequent or hard stools, with nothing else concerning.",
+        "Reassure that constipation is common in pregnancy (hormonal effects on the bowel and, later, pressure from the growing uterus) and is not usually a sign of a problem.",
+        "Advise increasing fluid and fibre intake and gentle activity; signpost to local/BNF guidance if a laxative is being considered rather than giving medication advice directly."
+      ]
+    },
+    {
+      "heading": "Likely round ligament or musculoskeletal pain",
+      "bullets": [
+        "Mild, sharp or aching pain, worse on standing, moving, or coughing, low in the tummy or groin, with nothing else concerning.",
+        "Reassure this is commonly round ligament or musculoskeletal stretching pain and is not usually a sign of a problem.",
+        "Advise simple measures — rest, gentle movement, warmth; signpost to local/BNF guidance for analgesia rather than giving medication advice directly."
+      ]
+    },
+    {
+      "heading": "Cause unclear — still worth a face-to-face check",
+      "bullets": [
+        "Red-flag causes screened and not currently present, but the cause is not clearly benign — arrange face-to-face assessment.",
+        "Abdominal (and, if indicated, pelvic) examination, urinalysis, fetal assessment (CTG if appropriate for gestation), BP check, and consider ultrasound if pain persists, is severe, or the diagnosis remains unclear.",
+        "Reconsider ectopic, ovarian cyst accident, appendicitis, abruption, labour, UTI, and pre-eclampsia if the picture changes."
+      ]
+    },
+    {
+      "heading": "Safety-netting to give (all non-emergency outcomes)",
+      "bullets": [
+        "Contact the unit again immediately — any time — if pain becomes severe, constant, or one-sided, bleeding starts, fever develops, movements reduce, or she feels faint or generally unwell.",
+        "Come back at any time, however many times, if still worried — reassurance does not replace being seen if things change."
+      ]
+    },
+    {
+      "heading": "What to document",
+      "bullets": [
+        "Onset, site, and character of pain, and how it has changed.",
+        "Associated symptoms screened for (bleeding, fever, urinary symptoms, headache/visual symptoms, contractions, movements).",
+        "Examination and investigation findings; fetal assessment result.",
+        "Advice, referral route, and safety-netting given."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "MBRRACE-UK",
+      "section": "Maternal mortality reports — collapse alongside abdominal pain as a red-flag combination",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "RCOG",
+      "section": "GTG 63 — Antepartum Haemorrhage, placental abruption can present with pain alone (concealed abruption)",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    },
+    {
+      "guideline": "NG126",
+      "section": "Ectopic pregnancy and miscarriage — presenting symptoms of ectopic pregnancy",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "Clinical practice (gynaecology)",
+      "section": "Ovarian torsion/cyst accident in pregnancy — not covered by a dedicated NICE or RCOG guideline",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    },
+    {
+      "guideline": "Clinical practice (general surgery / obstetric medicine)",
+      "section": "Appendicitis in pregnancy — atypical presentation; not covered by a dedicated NICE or RCOG guideline",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    },
+    {
+      "guideline": "NICE CKS",
+      "section": "Urinary tract infection (lower) — women, pregnant / Pyelonephritis — acute",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "NG25",
+      "section": "Preterm labour and birth — assessment and management of suspected preterm labour",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "NG235",
+      "section": "Intrapartum care — latent phase advice and admission criteria (actively updated guideline — check current version)",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "NG133",
+      "section": "Hypertension in pregnancy — symptoms of pre-eclampsia to screen for at every contact",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "Clinical practice (pelvic health physiotherapy guidance)",
+      "section": "Pregnancy-related pelvic girdle pain / symphysis pubis dysfunction — general reassurance and physiotherapy referral advice; not a dedicated NICE guideline topic",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    },
+    {
+      "guideline": "NG201",
+      "section": "Antenatal care — dietary/lifestyle advice for common pregnancy symptoms (constipation, pelvic/back pain) and general safety-netting principles",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "Clinical practice",
+      "section": "Round ligament / musculoskeletal pain in pregnancy — general reassurance advice; not a dedicated NICE guideline topic",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

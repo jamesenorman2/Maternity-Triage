@@ -15,9 +15,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "icons/*.png"],
       manifest: {
-        name: "Maternity Triage Aide-Memoire",
-        short_name: "Maternity Triage",
-        description: "Personal aide-memoire for structured maternity triage, derived from NICE guidance.",
+        name: "Midwifery Quick Reference",
+        short_name: "Midwifery Ref",
+        description: "Quick-reference library for midwives on the go, derived from NICE/RCOG guidance and local trust guidelines.",
         theme_color: "#0b1220",
         background_color: "#0b1220",
         display: "standalone",
@@ -31,8 +31,8 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // Precache everything the app needs so a full triage completes with
-        // zero network requests once installed — this is the whole point.
+        // Precache everything the app needs so the reference library works
+        // with zero network requests once installed.
         globPatterns: ["**/*.{js,css,html,svg,png,ico}"],
         runtimeCaching: [],
       },

@@ -1,23 +1,19 @@
-import { allPathways } from "./index";
+import { topics } from "./index";
 import type { Citation } from "./schema";
 
 export interface VerifyEntry {
-  pathwayTitle: string;
-  nodeId: string;
+  topicTitle: string;
   citation: Citation;
 }
 
-// Walks every pathway's nodes and collects citations flagged verify:true, so
+// Walks every topic's citations and collects the ones flagged verify:true, so
 // the clinician has a single review list rather than hunting through screens.
 export function collectVerifyList(): VerifyEntry[] {
   const entries: VerifyEntry[] = [];
-  for (const pathway of allPathways) {
-    for (const node of Object.values(pathway.nodes)) {
-      const citations = node.type === "question" ? (node.citation ? [node.citation] : []) : node.citations;
-      for (const citation of citations) {
-        if (citation.verify) {
-          entries.push({ pathwayTitle: pathway.title, nodeId: node.id, citation });
-        }
+  for (const topic of topics) {
+    for (const citation of topic.citations) {
+      if (citation.verify) {
+        entries.push({ topicTitle: topic.title, citation });
       }
     }
   }

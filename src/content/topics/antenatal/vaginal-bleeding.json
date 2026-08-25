@@ -1,0 +1,119 @@
+{
+  "id": "vb",
+  "title": "Vaginal bleeding in pregnancy",
+  "section": "antenatal",
+  "summary": "Any bleeding from the genital tract in pregnancy, before onset of labour.",
+  "keywords": ["spotting", "blood", "PV bleed", "period-like bleeding", "bleeding in pregnancy", "blood loss", "clots", "miscarriage", "ectopic", "placenta praevia", "abruption"],
+  "lastReviewed": "2026-07-22",
+  "redFlags": [
+    "Signs of shock or collapse (faint/dizzy, racing heart, clammy, confused) — this is an emergency regardless of visible blood loss.",
+    "Severe or worsening one-sided abdominal pain, or pain out of proportion to bleeding — think ectopic.",
+    "Constant severe pain, a tense/'woody' hard uterus, or bleeding that seems less than the degree of shock would suggest — think concealed placental abruption.",
+    "Known low-lying placenta / placenta praevia with any bleeding."
+  ],
+  "blocks": [
+    {
+      "heading": "Signs of shock or collapse",
+      "bullets": [
+        "Call 999 / put out an emergency call per local major obstetric haemorrhage protocol — do not drive her in yourself.",
+        "Do not perform a digital vaginal examination — placenta praevia has not been excluded.",
+        "Prepare for emergency transfer/resuscitation: IV access, bloods including group & save/crossmatch, senior obstetric and anaesthetic input.",
+        "See the Major obstetric haemorrhage emergency drill for full actions."
+      ]
+    },
+    {
+      "heading": "Suspected ectopic pregnancy (under 24 weeks)",
+      "bullets": [
+        "Severe or worsening one-sided pain, shoulder-tip pain, or pain out of proportion to bleeding.",
+        "Arrange emergency transfer for assessment — do not wait for a routine early pregnancy unit slot.",
+        "Early pregnancy unit or gynaecology emergency assessment with urgent ultrasound and beta-hCG.",
+        "Call 999 immediately if any signs of shock/collapse develop at any point."
+      ]
+    },
+    {
+      "heading": "Suspected placental abruption (24+ weeks)",
+      "bullets": [
+        "Constant severe pain, tense/'woody' hard uterus, or bleeding that seems less than the degree of pain/shock would suggest (can be concealed).",
+        "Call 999 / emergency obstetric response per local major obstetric haemorrhage / abruption protocol.",
+        "Continuous fetal monitoring as soon as available; anticipate fetal compromise.",
+        "IV access, bloods including group & save/crossmatch and clotting, senior obstetric and anaesthetic input.",
+        "Do not perform a digital vaginal examination until placenta praevia excluded."
+      ]
+    },
+    {
+      "heading": "Known low-lying placenta / praevia (24+ weeks)",
+      "bullets": [
+        "Admit for assessment — do NOT perform a digital vaginal examination.",
+        "Continuous or intermittent fetal monitoring as clinically indicated; maternal observations.",
+        "Urgent obstetric review; ultrasound to reassess placental position/bleeding source if not recently done.",
+        "Group & save/crossmatch per local major obstetric haemorrhage protocol given known praevia."
+      ]
+    },
+    {
+      "heading": "Early-pregnancy bleeding (under 24 weeks), no red flags",
+      "bullets": [
+        "Heavier bleeding or passing clots/tissue: arrange same-day early pregnancy unit (or emergency gynaecology if EPU closed) assessment with ultrasound.",
+        "Fever, offensive discharge, or an open cervix on examination: same-day assessment and consider sepsis screen (see Sepsis emergency drill if she appears unwell).",
+        "Light spotting/period-like with no other concerns: routine early pregnancy unit referral; advise rest and avoiding intercourse/tampons until reviewed — VERIFY local advice wording."
+      ]
+    },
+    {
+      "heading": "Antepartum bleeding (24+ weeks), no red flags and praevia not known",
+      "bullets": [
+        "Heavier bleeding (soaking pads, clots): admit for assessment, do not perform digital vaginal examination until placenta praevia excluded by scan/notes; continuous fetal monitoring (CTG), group & save/crossmatch, urgent obstetric review, ultrasound.",
+        "Spotting/light with contractions, reduced fetal movements, or other concerns: admit for assessment, CTG and maternal observations, urgent obstetric review to assess for labour, abruption, or other cause.",
+        "Spotting/light with no other concerns: same-day assessment, CTG, maternal observations, obstetric review; speculum examination once praevia excluded, to look for a local cause if appropriate."
+      ]
+    },
+    {
+      "heading": "Safety-netting to give",
+      "bullets": [
+        "Call 999 or attend A&E immediately if bleeding becomes heavier/heavy, pain develops or worsens (especially one-sided), or she feels faint, dizzy, or unwell.",
+        "Come back at any time, however many times, if still worried."
+      ]
+    },
+    {
+      "heading": "What to document",
+      "bullets": [
+        "Estimated blood loss and duration; pain characteristics.",
+        "Placental position if known; gestation.",
+        "CTG/fetal heart findings once available.",
+        "Route of referral and time; plan and review time."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "RCOG",
+      "section": "GTG 63 — Antepartum Haemorrhage",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    },
+    {
+      "guideline": "NG126",
+      "section": "Ectopic pregnancy and miscarriage — presenting symptoms and referral pathway",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "RCOG",
+      "section": "GTG 52 — Prevention and Management of Postpartum Haemorrhage",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    },
+    {
+      "guideline": "MBRRACE-UK",
+      "section": "Maternal mortality reports — haemorrhage as a leading direct cause of death",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "NG51",
+      "section": "Sepsis — recognition and early management, pregnancy-specific red flags",
+      "checked": "2026-07-22",
+      "verify": true
+    }
+  ]
+}

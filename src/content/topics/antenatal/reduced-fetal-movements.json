@@ -1,0 +1,101 @@
+{
+  "id": "rfm",
+  "title": "Reduced fetal movements",
+  "section": "antenatal",
+  "summary": "Any reported reduction, change, or absence of fetal movements from 24+0 weeks.",
+  "keywords": ["baby not moving", "quiet baby", "stopped kicking", "no movements", "less movement", "movements reduced", "reduced movements", "not felt baby move", "baby has gone quiet", "RFM"],
+  "lastReviewed": "2026-07-22",
+  "redFlags": [
+    "No fetal movements felt at all — assess without delay, any time of day.",
+    "Recurrent presentation of reduced movements this pregnancy — itself a risk factor, even if movements are still present."
+  ],
+  "blocks": [
+    {
+      "heading": "No movements felt at all",
+      "bullets": [
+        "Attend for immediate assessment — handheld Doppler check for fetal heartbeat is the first step.",
+        "If fetal heart cannot be confidently identified, arrange urgent ultrasound confirmation of viability without delay.",
+        "If fetal heart confirmed, proceed to full assessment per the recurrent/risk-factor pathway below (CTG plus growth/liquor/Doppler ultrasound) — VERIFY local escalation route.",
+        "Escalate to obstetric team immediately regardless of contact channel.",
+        "By phone: tell her to come in right away, do not wait — this needs checking now, whatever the time. If she has any other symptoms (bleeding, severe pain, feeling generally unwell/collapse), advise 999 instead of driving herself in."
+      ]
+    },
+    {
+      "heading": "Recurrent presentation (reported before, this pregnancy)",
+      "bullets": [
+        "Confirm fetal heartbeat and perform CTG (VERIFY minimum duration locally — commonly at least 20 minutes).",
+        "Arrange ultrasound for growth, liquor volume and umbilical artery Dopplers within 24 hours, regardless of CTG result — recurrent presentation is itself a risk factor.",
+        "Full clinical assessment: symphysis-fundal height, BP, urinalysis, review of risk factors.",
+        "Discuss with obstetric team given repeat presentation.",
+        "Seen within 15 minutes (face-to-face) / attend within the hour (phone)."
+      ]
+    },
+    {
+      "heading": "First presentation with risk factors present",
+      "bullets": [
+        "Risk factors: small-for-gestational-age or growth concerns, known placental insufficiency, previous stillbirth, maternal diabetes, obstetric cholestasis, hypertensive disease, or reduced movements alongside any bleeding, pain, or reduced fluid.",
+        "Confirm fetal heartbeat and perform CTG.",
+        "Arrange ultrasound for growth, liquor volume and umbilical artery Dopplers within 24 hours given risk factors present.",
+        "Full clinical assessment including BP and urinalysis (pre-eclampsia screen) if not already done today.",
+        "Discuss with obstetric team.",
+        "Seen within 15 minutes (face-to-face) / attend within the hour (phone)."
+      ]
+    },
+    {
+      "heading": "First presentation, no additional risk factors, 24+ weeks",
+      "bullets": [
+        "Confirm fetal heartbeat and perform CTG (VERIFY minimum duration locally — commonly at least 20 minutes).",
+        "If CTG is normal and no other concerns identified, growth ultrasound is not routinely required for a single first presentation at term with no risk factors — VERIFY local pathway, particularly for gestations under 28 weeks where practice may differ.",
+        "Full clinical assessment: symphysis-fundal height, BP, urinalysis.",
+        "Seen within 1 hour (face-to-face) / same-day assessment (phone)."
+      ]
+    },
+    {
+      "heading": "Under 24 weeks",
+      "bullets": [
+        "Reassure that fetal movement patterns vary widely and are often not consistently felt before 24 weeks, especially in a first pregnancy.",
+        "If she has never felt any movement at all by 24 weeks, arrange assessment.",
+        "Provide general fetal-movement-awareness information."
+      ]
+    },
+    {
+      "heading": "Safety-netting to give",
+      "bullets": [
+        "Come back in immediately, any time, if movements reduce again or stop, or if bleeding, pain, headache/visual symptoms, or fever develop.",
+        "Contact the unit again at any time if worried, however many times, even if she has called before.",
+        "Continue to be aware of the baby's usual pattern of movements going forward."
+      ]
+    },
+    {
+      "heading": "What to document",
+      "bullets": [
+        "Time movements last definitely felt, and time of this contact.",
+        "Fetal heart confirmed by handheld Doppler — yes/no, by whom, at what time.",
+        "Number and dates of previous RFM presentations this pregnancy, if recurrent.",
+        "CTG findings and duration; growth scan booked — date/time.",
+        "Risk factors reviewed; advice and safety-netting given."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "NG201",
+      "section": "Antenatal care — recommendations on fetal movements (assess without delay if concerned)",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "MBRRACE-UK",
+      "section": "Perinatal mortality reviews — absent/reduced fetal movements as a red-flag presentation",
+      "checked": "2026-07-22",
+      "verify": true
+    },
+    {
+      "guideline": "NHS England",
+      "section": "Saving Babies' Lives Care Bundle v3, Element 3 — reduced fetal movements",
+      "checked": "2026-07-22",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

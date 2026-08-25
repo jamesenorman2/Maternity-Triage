@@ -1,9 +1,8 @@
-import { pathways, emergencyDrills } from "../content";
+import { topics } from "../content";
 import { collectVerifyList } from "../content/verifyList";
 
 export default function ContentStatusScreen({ onClose }: { onClose: () => void }) {
   const verifyList = collectVerifyList();
-  const all = [...pathways, ...emergencyDrills];
 
   return (
     <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="content-status-title">
@@ -16,11 +15,11 @@ export default function ContentStatusScreen({ onClose }: { onClose: () => void }
         </div>
 
         <section className="outcome-section">
-          <h2>Pathway versions</h2>
+          <h2>Topic versions</h2>
           <ul>
-            {all.map((p) => (
-              <li key={p.id}>
-                {p.title} — last reviewed {p.lastReviewed}
+            {topics.map((t) => (
+              <li key={t.id}>
+                {t.title} — last reviewed {t.lastReviewed}
               </li>
             ))}
           </ul>
@@ -35,7 +34,7 @@ export default function ContentStatusScreen({ onClose }: { onClose: () => void }
           <ul>
             {verifyList.map((v, i) => (
               <li key={i}>
-                <strong>{v.pathwayTitle}</strong> ({v.nodeId}) — {v.citation.guideline}: {v.citation.section}
+                <strong>{v.topicTitle}</strong> — {v.citation.guideline}: {v.citation.section}
               </li>
             ))}
           </ul>

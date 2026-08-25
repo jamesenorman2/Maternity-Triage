@@ -1,40 +1,42 @@
 import { useMemo, useState } from "react";
-import { pathways } from "../content";
-import type { Pathway, PathwaySection } from "../content/schema";
-import { useTriage } from "../state/TriageContext";
+import { topics } from "../content";
+import type { ReferenceTopic, TopicSection } from "../content/schema";
+import { useContent } from "../state/ContentContext";
 
-const SECTION_LABELS: Record<PathwaySection, string> = {
+const SECTION_LABELS: Record<TopicSection, string> = {
   antenatal: "Antenatal",
   intrapartum: "Intrapartum",
   postnatal: "Postnatal",
   emergency: "Emergencies",
+  trust: "Local trust guidelines (Yeovil / Somerset FT)",
 };
 
-const SECTION_ORDER: PathwaySection[] = ["antenatal", "intrapartum", "postnatal"];
+const SECTION_ORDER: TopicSection[] = ["antenatal", "intrapartum", "postnatal", "trust"];
 
 export default function HomeScreen() {
   const [query, setQuery] = useState("");
-  const { startPathway } = useTriage();
+  const { selectTopic } = useContent();
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return pathways;
+    if (!q) return topics;
     const words = q.split(/\s+/).filter(Boolean);
-    return pathways.filter((p) => {
-      const haystack = [p.title, p.summary, ...(p.keywords ?? [])].join(" ").toLowerCase();
-      // Every typed word must appear somewhere in the pathway's title/summary/keywords —
-      // lets free text like "left sided pain" or "appendix" find the right pathway
+    return topics.filter((t) => {
+      const haystack = [t.title, t.summary, ...(t.keywords ?? [])].join(" ").toLowerCase();
+      // Every typed word must appear somewhere in the topic's title/summary/keywords —
+      // lets free text like "left sided pain" or "appendix" find the right topic
       // without needing an exact phrase match.
       return words.every((w) => haystack.includes(w));
     });
   }, [query]);
 
   const grouped = useMemo(() => {
-    const map = new Map<PathwaySection, Pathway[]>();
+    const map = new Map<TopicSection, ReferenceTopic[]>();
     for (const section of SECTION_ORDER) map.set(section, []);
-    for (const p of filtered) {
-      if (!map.has(p.section)) map.set(p.section, []);
-      map.get(p.section)!.push(p);
+    for (const t of filtered) {
+      if (t.section === "emergency") continue;
+      if (!map.has(t.section)) map.set(t.section, []);
+      map.get(t.section)!.push(t);
     }
     return map;
   }, [filtered]);
@@ -43,8 +45,8 @@ export default function HomeScreen() {
     <div className="screen home-screen">
       <header className="home-header">
         <div>
-          <h1>Maternity Triage</h1>
-          <p className="subtitle">Aide-memoire for structured symptom triage</p>
+          <h1>Midwifery Quick Reference</h1>
+          <p className="subtitle">Browse or search — everything a midwife needs on the go</p>
         </div>
       </header>
 
@@ -52,10 +54,10 @@ export default function HomeScreen() {
         className="search-input"
         type="search"
         inputMode="search"
-        placeholder="Search presenting complaint…"
+        placeholder="Search a topic…"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        aria-label="Search presenting complaint"
+        aria-label="Search topics"
       />
 
       {[...grouped.entries()].map(([section, items]) =>
@@ -63,10 +65,10 @@ export default function HomeScreen() {
           <section key={section} className="pathway-section">
             <h2>{SECTION_LABELS[section]}</h2>
             <div className="pathway-list">
-              {items.map((p) => (
-                <button key={p.id} className="pathway-card" onClick={() => startPathway(p)}>
-                  <span className="pathway-title">{p.title}</span>
-                  <span className="pathway-summary">{p.summary}</span>
+              {items.map((t) => (
+                <button key={t.id} className="pathway-card" onClick={() => selectTopic(t)}>
+                  <span className="pathway-title">{t.title}</span>
+                  <span className="pathway-summary">{t.summary}</span>
                 </button>
               ))}
             </div>
@@ -74,7 +76,9 @@ export default function HomeScreen() {
         )
       )}
 
-      {filtered.length === 0 && <p className="empty-state">No presenting complaint matches "{query}".</p>}
+      {query.trim() !== "" && filtered.length === 0 && (
+        <p className="empty-state">No topic matches "{query}".</p>
+      )}
     </div>
   );
 }

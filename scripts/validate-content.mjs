@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-// Validates every pathway content file: every `next` resolves to a real
-// node, every outcome has a category and at least one citation, and lists
-// all VERIFY-flagged citations for clinician review. Run via `npm run validate`.
+// Validates every reference-topic content file: required fields present,
+// every block has a heading and at least one bullet, every topic has at
+// least one citation, and lists all VERIFY-flagged citations for clinician
+// review. Run via `npm run validate`.
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
-const ROOT = new URL("../src/content", import.meta.url).pathname;
-const CATEGORIES = new Set(["RED", "ORANGE", "YELLOW", "GREEN"]);
+const ROOT = new URL("../src/content/topics", import.meta.url).pathname;
+const SECTIONS = new Set(["antenatal", "intrapartum", "postnatal", "emergency", "trust"]);
 
 function findJsonFiles(dir) {
   const out = [];
@@ -20,101 +21,63 @@ function findJsonFiles(dir) {
 
 let errors = [];
 let verifyList = [];
-let pathwayCount = 0;
-let nodeCount = 0;
+let topicCount = 0;
+const seenIds = new Set();
 
 for (const file of findJsonFiles(ROOT)) {
   const rel = path.relative(process.cwd(), file);
-  let pathway;
+  let topic;
   try {
-    pathway = JSON.parse(readFileSync(file, "utf-8"));
+    topic = JSON.parse(readFileSync(file, "utf-8"));
   } catch (e) {
     errors.push(`${rel}: invalid JSON — ${e.message}`);
     continue;
   }
 
-  if (!pathway.id || !pathway.title || !pathway.startNode || !pathway.nodes) {
-    errors.push(`${rel}: missing required top-level field (id/title/startNode/nodes)`);
+  if (!topic.id || !topic.title || !topic.section || !topic.summary || !topic.lastReviewed) {
+    errors.push(`${rel}: missing required top-level field (id/title/section/summary/lastReviewed)`);
     continue;
   }
-  pathwayCount++;
+  topicCount++;
 
-  const nodes = pathway.nodes;
-  const nodeIds = Object.keys(nodes);
-  nodeCount += nodeIds.length;
+  if (seenIds.has(topic.id)) {
+    errors.push(`${rel}: duplicate topic id "${topic.id}"`);
+  }
+  seenIds.add(topic.id);
 
-  if (!nodes[pathway.startNode]) {
-    errors.push(`${rel}: startNode "${pathway.startNode}" does not exist in nodes`);
+  if (!SECTIONS.has(topic.section)) {
+    errors.push(`${rel}: invalid section "${topic.section}"`);
   }
 
-  for (const id of nodeIds) {
-    const node = nodes[id];
-    if (node.id !== id) {
-      errors.push(`${rel}: node key "${id}" does not match its own id field "${node.id}"`);
-    }
+  if (!Array.isArray(topic.blocks) || topic.blocks.length === 0) {
+    errors.push(`${rel}: has no content blocks`);
+  } else {
+    topic.blocks.forEach((block, i) => {
+      if (!block.heading) {
+        errors.push(`${rel}: block[${i}] missing heading`);
+      }
+      if (!Array.isArray(block.bullets) || block.bullets.length === 0) {
+        errors.push(`${rel}: block "${block.heading ?? i}" has no bullets`);
+      }
+    });
+  }
 
-    if (node.type === "question") {
-      if (!Array.isArray(node.answers) || node.answers.length === 0) {
-        errors.push(`${rel}: question "${id}" has no answers`);
-      } else {
-        for (const answer of node.answers) {
-          if (!answer.next || !nodes[answer.next]) {
-            errors.push(`${rel}: question "${id}" answer "${answer.label}" points to missing node "${answer.next}"`);
-          }
-        }
+  if (!Array.isArray(topic.citations) || topic.citations.length === 0) {
+    errors.push(`${rel}: has no citations`);
+  } else {
+    for (const c of topic.citations) {
+      if (c.verify) {
+        verifyList.push(`${rel} :: ${c.guideline} — ${c.section}`);
       }
-      if (node.citation?.verify) {
-        verifyList.push(`${rel} :: ${id} :: ${node.citation.guideline} — ${node.citation.section}`);
-      }
-    } else if (node.type === "outcome") {
-      if (!CATEGORIES.has(node.category)) {
-        errors.push(`${rel}: outcome "${id}" has invalid/missing category "${node.category}"`);
-      }
-      if (!Array.isArray(node.citations) || node.citations.length === 0) {
-        errors.push(`${rel}: outcome "${id}" has no citations`);
-      } else {
-        for (const c of node.citations) {
-          if (c.verify) {
-            verifyList.push(`${rel} :: ${id} :: ${c.guideline} — ${c.section}`);
-          }
-        }
-      }
-      if (!Array.isArray(node.actions) || node.actions.length === 0) {
-        errors.push(`${rel}: outcome "${id}" has no actions`);
-      }
-      if (!Array.isArray(node.safetyNetting)) {
-        errors.push(`${rel}: outcome "${id}" missing safetyNetting array`);
-      }
-      if (!Array.isArray(node.documentationPrompts) || node.documentationPrompts.length === 0) {
-        errors.push(`${rel}: outcome "${id}" has no documentationPrompts`);
-      }
-    } else {
-      errors.push(`${rel}: node "${id}" has unknown type "${node.type}"`);
     }
   }
 
-  // Reachability: every node should be reachable from startNode (catches orphans/typos).
-  const reachable = new Set([pathway.startNode]);
-  const queue = [pathway.startNode];
-  while (queue.length) {
-    const current = nodes[queue.pop()];
-    if (current?.type === "question") {
-      for (const a of current.answers) {
-        if (nodes[a.next] && !reachable.has(a.next)) {
-          reachable.add(a.next);
-          queue.push(a.next);
-        }
-      }
-    }
-  }
-  for (const id of nodeIds) {
-    if (!reachable.has(id)) {
-      errors.push(`${rel}: node "${id}" is unreachable from startNode`);
-    }
+  if (topic.redFlags && !Array.isArray(topic.redFlags)) {
+    errors.push(`${rel}: redFlags must be an array if present`);
   }
 }
 
-console.log(`Validated ${pathwayCount} pathway file(s), ${nodeCount} node(s).\n`);
+console.log(`Validated ${topicCount} topic file(s).\n`);
 
 if (verifyList.length > 0) {
   console.log(`⚠ ${verifyList.length} citation(s) flagged VERIFY — review before clinical reliance:\n`);
@@ -128,4 +91,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("✓ All pathway content is structurally valid.");
+console.log("✓ All topic content is structurally valid.");

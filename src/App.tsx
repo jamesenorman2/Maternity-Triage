@@ -1,35 +1,20 @@
 import { useState } from "react";
 import IntendedUseModal from "./components/IntendedUseModal";
 import HomeScreen from "./components/HomeScreen";
-import OpeningScreen from "./components/OpeningScreen";
-import QuestionScreen from "./components/QuestionScreen";
-import OutcomeScreen from "./components/OutcomeScreen";
+import TopicScreen from "./components/TopicScreen";
 import EmergenciesDrawer from "./components/EmergenciesDrawer";
 import ContentStatusScreen from "./components/ContentStatusScreen";
 import ThemeToggle from "./components/ThemeToggle";
 import InstallButton from "./components/InstallButton";
-import { TriageProvider, useTriage } from "./state/TriageContext";
+import { ContentProvider, useContent } from "./state/ContentContext";
 import { ThemeProvider } from "./state/ThemeContext";
 import { InstallPromptProvider } from "./state/InstallPromptContext";
 
-function TriageRouter() {
-  const { pathway, opening, currentNodeId } = useTriage();
-
-  if (!pathway) return null;
-  if (!opening) return <OpeningScreen />;
-
-  const node = currentNodeId ? pathway.nodes[currentNodeId] : null;
-  if (!node) return null;
-
-  return node.type === "question" ? <QuestionScreen node={node} /> : <OutcomeScreen node={node} />;
-}
-
 function AppShell() {
-  const { pathway } = useTriage();
+  const { selectedTopic } = useContent();
   const [showAbout, setShowAbout] = useState(false);
   const [showEmergencies, setShowEmergencies] = useState(false);
   const [showContentStatus, setShowContentStatus] = useState(false);
-  const isEmergencyDrill = pathway?.section === "emergency";
 
   return (
     <div className="app-root">
@@ -40,16 +25,14 @@ function AppShell() {
         <button className="icon-btn" onClick={() => setShowContentStatus(true)} aria-label="Content status and VERIFY list">
           📋 Content
         </button>
-        {!isEmergencyDrill && (
-          <button className="toolbar-emergency-btn" onClick={() => setShowEmergencies(true)}>
-            🚨 Emergencies
-          </button>
-        )}
+        <button className="toolbar-emergency-btn" onClick={() => setShowEmergencies(true)}>
+          🚨 Emergencies
+        </button>
         <InstallButton />
         <ThemeToggle />
       </div>
 
-      {pathway ? <TriageRouter /> : <HomeScreen />}
+      {selectedTopic ? <TopicScreen topic={selectedTopic} /> : <HomeScreen />}
 
       {showAbout && <IntendedUseModal onDismiss={() => setShowAbout(false)} />}
       {showEmergencies && <EmergenciesDrawer onClose={() => setShowEmergencies(false)} />}
@@ -62,9 +45,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <InstallPromptProvider>
-        <TriageProvider>
+        <ContentProvider>
           <AppShell />
-        </TriageProvider>
+        </ContentProvider>
       </InstallPromptProvider>
     </ThemeProvider>
   );

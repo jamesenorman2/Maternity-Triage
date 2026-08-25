@@ -2,15 +2,20 @@ export function IntendedUseStatement() {
   return (
     <>
       <p>
-        This tool is a personal reference aide-memoire for use by a registered midwife alongside her own clinical
-        judgement and her employer's local guidelines. It does not diagnose, does not store patient information, and
-        does not replace local policy, senior review, or emergency protocols. Content is derived from published NICE
-        guidance (versions and dates listed per pathway) and must be checked against current guidance before
-        reliance.
+        This tool is a personal quick-reference library for a registered midwife, for looking up information on the
+        go — it is not a decision-support or triage tool, does not diagnose, and does not store patient information.
+        It does not replace local policy, senior review, emergency protocols, or your own clinical judgement. Content
+        is derived from published NICE and RCOG guidance (versions and dates listed per topic) and must be checked
+        against current guidance before reliance.
       </p>
       <p className="intended-use-sub">
-        Local trust guidelines always take precedence over the content in this app. Nothing typed into this app is
-        saved, sent anywhere, or recorded — closing or resetting a triage discards it completely.
+        A "Local trust guidelines" section is included for Yeovil Hospital (part of Somerset NHS Foundation Trust).
+        Somerset FT's clinical guidelines live on a staff-only intranet with no public source to cite honestly, so
+        this section is empty until that content is supplied directly and added with proper attribution. Local trust
+        guidelines always take precedence over the content in this app.
+      </p>
+      <p className="intended-use-sub">
+        Nothing typed into this app is saved, sent anywhere, or recorded.
       </p>
       <p className="intended-use-sub">
         <strong>Installing to your home screen:</strong> on Android/Chrome/Edge, tap <strong>📲 Install app</strong>{" "}
