@@ -1,0 +1,54 @@
+{
+  "id": "ip-perineal-trauma",
+  "title": "Perineal trauma: recognising and categorising",
+  "section": "intrapartum",
+  "summary": "Classifying perineal tears and knowing when a repair needs an appropriately trained clinician.",
+  "keywords": ["perineal tear", "episiotomy", "perineal trauma", "third degree tear", "fourth degree tear", "OASI", "anal sphincter injury", "perineal repair"],
+  "lastReviewed": "2026-10-21",
+  "redFlags": [
+    "Any suspected third- or fourth-degree tear (obstetric anal sphincter injury, OASI) must be repaired in theatre by an appropriately trained/experienced clinician — do not attempt this repair outside that setting."
+  ],
+  "blocks": [
+    {
+      "heading": "Classifying the trauma",
+      "bullets": [
+        "First degree: injury to perineal skin and/or vaginal mucosa only.",
+        "Second degree: injury to perineal muscles but not the anal sphincter.",
+        "Third degree: injury involving the anal sphincter complex — subdivided by how much of the external sphincter is torn; VERIFY the exact subdivision definitions (commonly described as 3a/3b/3c) against current local training.",
+        "Fourth degree: injury involving the anal sphincter complex and the anal epithelium."
+      ]
+    },
+    {
+      "heading": "Risk factors for obstetric anal sphincter injury (OASI)",
+      "bullets": [
+        "First vaginal birth, instrumental birth, a larger baby, a prolonged second stage, and a persistent occipito-posterior position are commonly cited risk factors.",
+        "VERIFY the full current risk-factor list against RCOG guidance, as it is periodically updated."
+      ]
+    },
+    {
+      "heading": "Repair",
+      "bullets": [
+        "First- and second-degree tears can be repaired per local competency and training.",
+        "Third- and fourth-degree tears (OASI) require repair in theatre, usually by an obstetrician with appropriate training — do not attempt this repair outside that setting.",
+        "Antibiotics and laxatives are commonly given after OASI repair — VERIFY exact local protocol and dosing."
+      ]
+    },
+    {
+      "heading": "What to document",
+      "bullets": [
+        "Clear description (or diagram) of the trauma and its classification.",
+        "Repair performed, by whom, and materials used.",
+        "Postnatal advice given — pelvic floor exercises, follow-up clinic referral for third/fourth-degree tears."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "RCOG",
+      "section": "GTG 29 — The Management of Third- and Fourth-Degree Perineal Tears (OASI)",
+      "checked": "2026-10-21",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

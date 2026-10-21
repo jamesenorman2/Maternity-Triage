@@ -25,7 +25,7 @@ export interface ContentBlock {
   bullets: string[];
 }
 
-export type TopicSection = "antenatal" | "intrapartum" | "postnatal" | "emergency" | "trust";
+export type TopicSection = "antenatal" | "intrapartum" | "postnatal" | "general" | "emergency" | "trust";
 
 export interface ReferenceTopic {
   id: string;

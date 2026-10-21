@@ -1,0 +1,51 @@
+{
+  "id": "gen-news-meows",
+  "title": "Using NEWS2 / MEOWS observations",
+  "section": "general",
+  "summary": "Why modified obstetric early warning scores exist, and how to respond to a trigger.",
+  "keywords": ["NEWS2", "MEOWS", "early warning score", "maternal observations", "deteriorating patient", "escalation", "obstetric early warning score"],
+  "lastReviewed": "2026-10-21",
+  "blocks": [
+    {
+      "heading": "What it is",
+      "bullets": [
+        "A modified early warning score (MEOWS) adapts general adult early-warning scoring (NEWS2) to pregnancy-specific physiology — for example, the higher resting heart rate and lower blood pressure seen in normal pregnancy — so that deterioration is picked up appropriately rather than masked or over-triggered.",
+        "VERIFY the exact scoring chart and trigger thresholds used locally, as these vary between trusts."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "bullets": [
+        "MBRRACE-UK maternal mortality reviews repeatedly highlight delayed recognition of deterioration — especially in sepsis and haemorrhage — as a preventable factor in maternal deaths."
+      ]
+    },
+    {
+      "heading": "Responding to a trigger",
+      "bullets": [
+        "Do not wait to see if it resolves — follow the local escalation protocol for the trigger score reached.",
+        "A single very abnormal parameter can warrant escalation even if the total score is not high — VERIFY local 'red' single-parameter triggers."
+      ]
+    },
+    {
+      "heading": "Trust your instinct",
+      "bullets": [
+        "A feeling that 'something isn't right' — from the woman, her birth partner, or you — is itself a legitimate reason to escalate, independent of the numerical score."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "MBRRACE-UK",
+      "section": "Maternal mortality reports — delayed recognition of deterioration as a recurring preventable factor",
+      "checked": "2026-10-21",
+      "verify": true
+    },
+    {
+      "guideline": "Clinical practice (local MEOWS chart)",
+      "section": "Modified early warning score — not a single national NICE standard; VERIFY the chart and thresholds in local use",
+      "checked": "2026-10-21",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

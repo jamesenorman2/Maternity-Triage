@@ -1,0 +1,65 @@
+{
+  "id": "ip-labour-stages",
+  "title": "Normal labour: stages and progress",
+  "section": "intrapartum",
+  "summary": "Recognising the stages of labour and what counts as normal progress in a low-risk pregnancy.",
+  "keywords": ["labour stages", "first stage", "second stage", "third stage", "latent phase", "established labour", "active labour", "dilatation", "pushing"],
+  "lastReviewed": "2026-10-21",
+  "blocks": [
+    {
+      "heading": "Latent first stage",
+      "bullets": [
+        "Painful contractions with some cervical change, including effacement and dilatation up to around 4cm.",
+        "Can last many hours, especially in a first baby — support at home with analgesia and reassurance unless there are concerns.",
+        "Not itself a reason for admission unless there are other concerns (reduced movements, bleeding, ruptured membranes, maternal request for assessment)."
+      ]
+    },
+    {
+      "heading": "Established (active) first stage",
+      "bullets": [
+        "Regular, painful contractions with progressive cervical dilatation from around 4cm to full dilatation.",
+        "Offer the full range of pain relief options and discuss preferences for the rest of labour.",
+        "VERIFY local observation frequency (maternal pulse/BP/temperature, contraction frequency, fetal heart) — this is set by local protocol and NICE intrapartum care guidance."
+      ]
+    },
+    {
+      "heading": "Second stage",
+      "bullets": [
+        "From full dilatation to birth of the baby — has a passive phase (before the urge to push) and an active (pushing) phase.",
+        "VERIFY local definitions of 'delay' in second stage — commonly discussed as around 2 hours without an epidural / 3 hours with one in a first baby, and around 1 hour without / 2 hours with one in a subsequent baby, but exact local thresholds and escalation steps should be confirmed against current protocol.",
+        "Delay in progress should prompt reassessment of contractions, position, and fetal wellbeing, and discussion with the obstetric team per local pathway."
+      ]
+    },
+    {
+      "heading": "Third stage",
+      "bullets": [
+        "From birth of the baby to delivery of the placenta and membranes.",
+        "Active management (uterotonic drug plus controlled cord traction) is generally recommended over physiological management, as it's associated with a lower risk of postpartum haemorrhage — discuss the choice with the woman antenatally where possible.",
+        "VERIFY local uterotonic drug/dose/timing protocol before administering.",
+        "A third stage lasting longer than expected, or any heavy bleeding, should prompt escalation — see the Major obstetric haemorrhage emergency drill."
+      ]
+    },
+    {
+      "heading": "If something isn't right",
+      "bullets": [
+        "This is a general orientation to normal progress, not a substitute for continuous clinical assessment.",
+        "See the Major obstetric haemorrhage, Cord prolapse, and Shoulder dystocia emergency drills for red-flag intrapartum events."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "NG235",
+      "section": "Intrapartum care — stages of labour, diagnosing established labour, and third-stage management (actively updated guideline — check current version)",
+      "checked": "2026-10-21",
+      "verify": true
+    },
+    {
+      "guideline": "RCOG",
+      "section": "GTG 52 — Prevention and Management of Postpartum Haemorrhage (active third-stage management)",
+      "checked": "2026-10-21",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

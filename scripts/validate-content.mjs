@@ -7,7 +7,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 const ROOT = new URL("../src/content/topics", import.meta.url).pathname;
-const SECTIONS = new Set(["antenatal", "intrapartum", "postnatal", "emergency", "trust"]);
+const SECTIONS = new Set(["antenatal", "intrapartum", "postnatal", "general", "emergency", "trust"]);
 
 function findJsonFiles(dir) {
   const out = [];

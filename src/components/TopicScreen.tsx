@@ -6,6 +6,7 @@ const SECTION_LABELS: Record<ReferenceTopic["section"], string> = {
   antenatal: "Antenatal",
   intrapartum: "Intrapartum",
   postnatal: "Postnatal",
+  general: "General reference",
   emergency: "Emergency",
   trust: "Local trust guideline",
 };

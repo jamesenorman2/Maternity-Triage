@@ -1,0 +1,65 @@
+{
+  "id": "gen-screening-timeline",
+  "title": "Antenatal screening timeline",
+  "section": "general",
+  "summary": "What's typically offered when across a straightforward pregnancy, as a quick memory-jogger.",
+  "keywords": ["booking appointment", "dating scan", "anomaly scan", "screening timeline", "antenatal appointments schedule", "OGTT", "GBS", "glucose tolerance test", "anti-D"],
+  "lastReviewed": "2026-10-21",
+  "blocks": [
+    {
+      "heading": "Booking (ideally by 10 weeks)",
+      "bullets": [
+        "Full history and risk assessment, booking bloods, BMI, and early dating.",
+        "VERIFY the exact local booking bloods panel — commonly includes FBC, blood group and antibody screen, infectious disease screening, and haemoglobinopathy screening, but local policy sets the full list."
+      ]
+    },
+    {
+      "heading": "Combined/dating scan (around 11–14 weeks)",
+      "bullets": [
+        "Confirms dates and, if combined screening is chosen, measures nuchal translucency as part of screening for Down's, Edwards', and Patau's syndromes."
+      ]
+    },
+    {
+      "heading": "Anomaly scan (around 18–21 weeks)",
+      "bullets": [
+        "Detailed structural ultrasound scan."
+      ]
+    },
+    {
+      "heading": "Ongoing routine reviews",
+      "bullets": [
+        "Blood pressure and urinalysis at every contact (pre-eclampsia screening).",
+        "Symphysis-fundal height measurement from around 24–28 weeks.",
+        "VERIFY the exact local appointment schedule, which varies by parity and risk factors."
+      ]
+    },
+    {
+      "heading": "Around 24–28 weeks",
+      "bullets": [
+        "Oral glucose tolerance test (OGTT) offered if risk factors for gestational diabetes are present — VERIFY local risk-factor criteria and exact timing.",
+        "First dose of anti-D prophylaxis for Rhesus-negative women, per local protocol."
+      ]
+    },
+    {
+      "heading": "Around 35–37 weeks",
+      "bullets": [
+        "Group B Streptococcus (GBS) testing where this is offered locally — VERIFY local policy, as universal GBS screening is not standard practice across all of the UK."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "NG201",
+      "section": "Antenatal care — schedule of appointments and routine screening offers",
+      "checked": "2026-10-21",
+      "verify": true
+    },
+    {
+      "guideline": "RCOG",
+      "section": "Group B Streptococcus in pregnancy — screening policy",
+      "checked": "2026-10-21",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

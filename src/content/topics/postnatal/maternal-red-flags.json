@@ -1,0 +1,66 @@
+{
+  "id": "pn-maternal-redflags",
+  "title": "Postnatal maternal red flags",
+  "section": "postnatal",
+  "summary": "Recognising when a postnatal woman needs urgent review rather than routine postnatal care.",
+  "keywords": ["postnatal check", "postpartum", "puerperium", "postnatal red flags", "maternal observations after birth", "postnatal deterioration"],
+  "lastReviewed": "2026-10-21",
+  "redFlags": [
+    "Heavy bleeding or other signs of postpartum haemorrhage.",
+    "Fever, rigors, or other signs of sepsis.",
+    "Severe headache, visual disturbance, or very high blood pressure — late-onset pre-eclampsia can present after birth.",
+    "Calf swelling/pain or breathlessness/chest pain — venous thromboembolism risk is raised throughout the 6 weeks postpartum.",
+    "Severe or worsening abdominal pain, or wound breakdown/infection signs.",
+    "Significant, rapid deterioration in mood, thinking, or behaviour."
+  ],
+  "blocks": [
+    {
+      "heading": "Heavy bleeding",
+      "bullets": [
+        "See the Major obstetric haemorrhage emergency drill — postpartum haemorrhage can occur at any point in the puerperium, not only immediately after birth."
+      ]
+    },
+    {
+      "heading": "Fever or signs of sepsis",
+      "bullets": [
+        "See the Suspected maternal sepsis emergency drill.",
+        "Common postnatal sources include endometritis, wound/perineal infection, mastitis, and urinary tract infection."
+      ]
+    },
+    {
+      "heading": "Headache, visual disturbance, or raised BP",
+      "bullets": [
+        "Pre-eclampsia and eclampsia can present for the first time, or worsen, after birth — work through the Headache, visual disturbance or epigastric pain topic for BP-banded guidance; see the Eclampsia emergency drill if any seizure activity occurs."
+      ]
+    },
+    {
+      "heading": "Venous thromboembolism (VTE) awareness",
+      "bullets": [
+        "Pregnancy and the 6 weeks after birth are a higher-risk period for VTE.",
+        "Ask specifically about calf pain, swelling, redness, chest pain, or breathlessness — escalate urgently if suspected rather than waiting to see if it settles.",
+        "VERIFY local VTE risk-assessment tool and thresholds for thromboprophylaxis."
+      ]
+    },
+    {
+      "heading": "Routine postnatal observations",
+      "bullets": [
+        "General principle — VERIFY local observation schedule: temperature, pulse, blood pressure, lochia (amount, colour, odour), uterine involution, perineal/wound healing, mood, and infant feeding.",
+        "Ask specifically about each red flag above at every postnatal contact, not only if volunteered."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "NG194",
+      "section": "Postnatal care — recognising and responding to maternal red-flag symptoms",
+      "checked": "2026-10-21",
+      "verify": true
+    },
+    {
+      "guideline": "MBRRACE-UK",
+      "section": "Maternal mortality reports — VTE and sepsis as leading causes of late maternal death, delayed recognition as a preventable factor",
+      "checked": "2026-10-21",
+      "verify": true
+    }
+  ]
+}

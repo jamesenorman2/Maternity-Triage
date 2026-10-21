@@ -1,0 +1,51 @@
+{
+  "id": "ip-fetal-monitoring",
+  "title": "Fetal monitoring in labour: basics",
+  "section": "intrapartum",
+  "summary": "Intermittent auscultation vs continuous CTG, and recognising a fetal heart pattern that needs escalation.",
+  "keywords": ["CTG", "cardiotocograph", "fetal heart monitoring", "intermittent auscultation", "fetal distress", "fetal heart rate", "monitoring in labour"],
+  "lastReviewed": "2026-10-21",
+  "redFlags": [
+    "Fetal bradycardia, reduced variability, or late/variable/prolonged decelerations on CTG — escalate for prompt obstetric review.",
+    "Any abnormal fetal heart rate found on intermittent auscultation should prompt a switch to continuous CTG."
+  ],
+  "blocks": [
+    {
+      "heading": "Choosing the monitoring method",
+      "bullets": [
+        "Intermittent auscultation is generally appropriate for women with a straightforward pregnancy and labour.",
+        "Continuous CTG is generally recommended where risk factors are present — for example meconium-stained liquor, maternal fever, an abnormal finding on auscultation, oxytocin use, or a higher-risk pregnancy — VERIFY the exact local risk-factor list, as it is set by local protocol and NICE intrapartum guidance."
+      ]
+    },
+    {
+      "heading": "What to assess on a CTG",
+      "bullets": [
+        "Baseline fetal heart rate, variability, presence of accelerations, and any decelerations and their pattern — this is a general assessment framework, not a substitute for formal CTG training.",
+        "VERIFY the current local classification system and terminology used for CTG interpretation before relying on any specific category label — fetal monitoring guidance and terminology have been revised over time, and older mnemonics taught previously may not match current local training."
+      ]
+    },
+    {
+      "heading": "If a trace is concerning",
+      "bullets": [
+        "Call for a senior review promptly rather than waiting to see if it resolves.",
+        "Simple measures while awaiting review can include a maternal position change, IV fluids, and stopping oxytocin if running — VERIFY local protocol for conservative measures.",
+        "Document clearly: time concern identified, actions taken, and time of senior review."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "NG235",
+      "section": "Intrapartum care — fetal monitoring, choice of intermittent auscultation vs continuous CTG (actively updated guideline — check current version and number)",
+      "checked": "2026-10-21",
+      "verify": true
+    },
+    {
+      "guideline": "Clinical practice (CTG interpretation training)",
+      "section": "CTG assessment framework — general teaching convention; VERIFY against current local/national CTG training, as classification systems have been revised",
+      "checked": "2026-10-21",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

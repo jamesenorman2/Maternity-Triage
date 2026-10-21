@@ -15,9 +15,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "icons/*.png"],
       manifest: {
-        name: "Midwifery Quick Reference",
-        short_name: "Midwifery Ref",
-        description: "Quick-reference library for midwives on the go, derived from NICE/RCOG guidance and local trust guidelines.",
+        name: "The Midwife's Companion",
+        short_name: "Midwife's Companion",
+        description: "A midwife's font of knowledge for on the go — antenatal, intrapartum, postnatal and emergency reference, derived from NICE/RCOG guidance and local trust guidelines.",
         theme_color: "#0b1220",
         background_color: "#0b1220",
         display: "standalone",

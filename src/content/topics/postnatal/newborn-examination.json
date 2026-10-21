@@ -1,0 +1,57 @@
+{
+  "id": "pn-newborn-exam",
+  "title": "Newborn infant physical examination (NIPE) basics",
+  "section": "postnatal",
+  "summary": "What the newborn physical examination covers and the key findings to refer on before discharge.",
+  "keywords": ["newborn check", "NIPE", "baby check", "newborn examination", "hip check", "red reflex", "newborn screening"],
+  "lastReviewed": "2026-10-21",
+  "redFlags": [
+    "Absent or abnormal red reflex.",
+    "Heart murmur, or absent/weak femoral pulses.",
+    "Hip instability on examination.",
+    "Ambiguous genitalia.",
+    "Abnormal tone, movements, or level of alertness."
+  ],
+  "blocks": [
+    {
+      "heading": "Timing",
+      "bullets": [
+        "A full NIPE examination is carried out within 72 hours of birth, with a further check by a GP at around 6–8 weeks — VERIFY exact local timing and pathway."
+      ]
+    },
+    {
+      "heading": "What's examined",
+      "bullets": [
+        "General appearance, colour, and behaviour.",
+        "Head and fontanelles.",
+        "Eyes — including the red reflex, to screen for cataract and some other eye conditions.",
+        "Heart — listening for murmurs and checking femoral pulses.",
+        "Hips — screening for developmental dysplasia (e.g. Ortolani/Barlow manoeuvres where trained).",
+        "Genitalia, spine, tone, and reflexes."
+      ]
+    },
+    {
+      "heading": "If a red flag is found",
+      "bullets": [
+        "Refer to the paediatric team per local pathway — do not simply advise 'routine follow-up' for any of the red flags above.",
+        "Document clearly what was found and the referral made."
+      ]
+    },
+    {
+      "heading": "Screening alongside NIPE",
+      "bullets": [
+        "Newborn hearing screen and the newborn blood spot (bloodspot) screening programme run alongside the physical examination.",
+        "VERIFY exact local timing and consent process for each screening programme."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "UK National Screening Committee",
+      "section": "NIPE programme standards — components and timing of the newborn physical examination",
+      "checked": "2026-10-21",
+      "nonNice": true,
+      "verify": true
+    }
+  ]
+}

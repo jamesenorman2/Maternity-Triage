@@ -1,0 +1,62 @@
+{
+  "id": "pn-breastfeeding",
+  "title": "Breastfeeding support: positioning and common problems",
+  "section": "postnatal",
+  "summary": "Core positioning/attachment principles, and recognising and responding to common early feeding problems.",
+  "keywords": ["breastfeeding", "latch", "attachment", "sore nipples", "engorgement", "mastitis", "tongue tie", "feeding problems", "infant feeding"],
+  "lastReviewed": "2026-10-21",
+  "blocks": [
+    {
+      "heading": "Signs of good attachment",
+      "bullets": [
+        "A wide-open mouth, more areola visible above the baby's top lip than below it, chin touching the breast, and rhythmic sucking and swallowing with no pain beyond the initial latch.",
+        "VERIFY current local infant-feeding training (e.g. UNICEF UK Baby Friendly Initiative materials) for the exact teaching points and positions used locally."
+      ]
+    },
+    {
+      "heading": "Sore or damaged nipples",
+      "bullets": [
+        "Usually a sign of an attachment problem — reassess positioning and attachment first before considering other causes.",
+        "Persistent problems despite reassessment may need specialist infant-feeding support."
+      ]
+    },
+    {
+      "heading": "Engorgement",
+      "bullets": [
+        "Breasts feel full, hard, and tender, typically in the first few days as milk 'comes in'.",
+        "Frequent, effective feeding or expressing, warmth before a feed, and a cold compress afterwards are commonly advised — VERIFY current local advice."
+      ]
+    },
+    {
+      "heading": "Mastitis",
+      "bullets": [
+        "A localised red, tender, hot area of the breast, sometimes with flu-like symptoms or fever.",
+        "Continue breastfeeding or expressing from the affected side where tolerated — this helps clear the blockage.",
+        "Seek review if there is a fever, she is systemically unwell, or there is no improvement with simple measures within 12–24 hours.",
+        "If she appears systemically unwell, consider the Suspected maternal sepsis emergency drill."
+      ]
+    },
+    {
+      "heading": "Tongue-tie",
+      "bullets": [
+        "Can contribute to feeding difficulty for some babies.",
+        "Refer per local infant-feeding/tongue-tie pathway if suspected, rather than assessing or treating this independently."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "UNICEF UK Baby Friendly Initiative",
+      "section": "Infant feeding standards — attachment and positioning",
+      "checked": "2026-10-21",
+      "nonNice": true,
+      "verify": true
+    },
+    {
+      "guideline": "NICE CKS",
+      "section": "Mastitis and breast abscess — breastfeeding, recognition and management",
+      "checked": "2026-10-21",
+      "verify": true
+    }
+  ]
+}

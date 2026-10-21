@@ -1,0 +1,64 @@
+{
+  "id": "gen-antenatal-bloods",
+  "title": "Reading common antenatal blood results",
+  "section": "general",
+  "summary": "A quick explainer for common antenatal blood tests — not a substitute for full interpretation by the responsible clinician.",
+  "keywords": ["blood tests pregnancy", "FBC", "haemoglobin", "iron deficiency", "booking bloods", "glucose tolerance test", "group and save", "antibodies", "anaemia pregnancy"],
+  "lastReviewed": "2026-10-21",
+  "blocks": [
+    {
+      "heading": "Full blood count (FBC)",
+      "bullets": [
+        "Checks haemoglobin (anaemia screening) and platelets.",
+        "VERIFY local haemoglobin thresholds for offering iron supplementation, as these differ by trimester."
+      ]
+    },
+    {
+      "heading": "Blood group and antibody screen",
+      "bullets": [
+        "Identifies Rhesus status and any red cell antibodies that may need additional fetal monitoring.",
+        "Rhesus-negative women are usually offered anti-D prophylaxis — VERIFY local dosing schedule."
+      ]
+    },
+    {
+      "heading": "Infectious disease screening",
+      "bullets": [
+        "HIV, hepatitis B, and syphilis screening are offered to all women.",
+        "Results need timely follow-up, and partner notification/support where a result is positive — per local pathway."
+      ]
+    },
+    {
+      "heading": "Haemoglobinopathy screening",
+      "bullets": [
+        "Sickle cell and thalassaemia screening is offered based on a family origin questionnaire and/or risk — VERIFY local pathway."
+      ]
+    },
+    {
+      "heading": "OGTT (glucose tolerance test)",
+      "bullets": [
+        "Used to diagnose gestational diabetes.",
+        "VERIFY current diagnostic glucose thresholds locally, as these are periodically reviewed."
+      ]
+    },
+    {
+      "heading": "This is general orientation only",
+      "bullets": [
+        "Always discuss an abnormal result with the responsible obstetric/midwifery team rather than acting on a single value in isolation."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "guideline": "NG201",
+      "section": "Antenatal care — routine screening blood tests",
+      "checked": "2026-10-21",
+      "verify": true
+    },
+    {
+      "guideline": "NG3",
+      "section": "Diabetes in pregnancy — diagnostic criteria for gestational diabetes (actively updated guideline — check current version and number)",
+      "checked": "2026-10-21",
+      "verify": true
+    }
+  ]
+}

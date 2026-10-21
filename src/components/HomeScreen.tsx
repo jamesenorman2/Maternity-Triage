@@ -7,11 +7,12 @@ const SECTION_LABELS: Record<TopicSection, string> = {
   antenatal: "Antenatal",
   intrapartum: "Intrapartum",
   postnatal: "Postnatal",
+  general: "General reference",
   emergency: "Emergencies",
   trust: "Local trust guidelines (Yeovil / Somerset FT)",
 };
 
-const SECTION_ORDER: TopicSection[] = ["antenatal", "intrapartum", "postnatal", "trust"];
+const SECTION_ORDER: TopicSection[] = ["antenatal", "intrapartum", "postnatal", "general", "trust"];
 
 export default function HomeScreen() {
   const [query, setQuery] = useState("");
@@ -45,8 +46,8 @@ export default function HomeScreen() {
     <div className="screen home-screen">
       <header className="home-header">
         <div>
-          <h1>Midwifery Quick Reference</h1>
-          <p className="subtitle">Browse or search — everything a midwife needs on the go</p>
+          <h1>The Midwife's Companion</h1>
+          <p className="subtitle">Your midwifery font of knowledge — browse or search</p>
         </div>
       </header>
 
